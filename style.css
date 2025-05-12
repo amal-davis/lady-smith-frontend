@@ -17,6 +17,9 @@ html, body {
   padding: 0;
   overflow: hidden; 
 }
+ html,body {
+    overflow-x: hidden;
+  }
 #scroll-container {
   height: 100%;
   overflow: auto; /* Let Smooth Scrollbar control scrolling */
