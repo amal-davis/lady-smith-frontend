@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort-Detail Page</title>
+            <link rel="stylesheet" href="resort-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+    
+          <!-- Brand + Mobile Toggle + Mobile Book Now Button -->
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <a class="navbar-brand text-white" href="#">
+              LADY SMITH
+              <span class="fw-light">RESORT</span>
+            </a>
+    
+            <div class="d-flex align-items-center">
+              <a href="#" class="btn btn-book d-lg-none me-2">BOOK NOW</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+    
+          <!-- Nav Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex align-items-lg-center ms-auto me-lg-3 gap-lg-4">
+              <li class="nav-item"><a class="nav-link " href="#">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ACCOMMODATIONS</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">DINING</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">PACKAGES</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ACTIVITIES</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">BLOGS</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+            </ul>
+          </div>
+    
+          <!-- Book Now Button for Desktop -->
+          <div class="d-none d-lg-flex align-items-center ms-auto">
+            <a href="#" class="btn btn-book">BOOK NOW</a>
+          </div>
+    
+        </div>
+      </nav>
+
+      <div id="scroll-container">
+
+<section class="banner mb-5">
+    <div class="banner-content">
+    <h1>Resort Detail Page</h1>
+</div>
+</section>
+
+
+<div class="container-fluid resort-bar">
+  <div class="d-flex justify-content-between align-items-center flex-wrap">
+    
+    <!-- Resort Name and Location -->
+    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center resort-info">
+      <div class="resort-name me-md-3">AMBER DALE LUXURY HOTEL & SPA</div>
+      <div class="text-muted small d-flex align-items-center mt-1 mt-md-0">
+        <i class="fas fa-map-marker-alt location-icon"></i>
+        KSEB Tunnel Road, Pallivasal, Munnar, Kerala
+      </div>
+      <div class="text-muted small mt-1">Call Us: +91 94977 15028</div>
+    </div>
+
+    <!-- Weather and Book Now Button -->
+    <div class="d-flex align-items-center temp-book-wrap mt-3 mt-md-0">
+      <div class="d-flex align-items-center temp-section me-3">
+        <img src="https://cdn-icons-png.flaticon.com/128/1146/1146869.png" alt="Weather Icon">
+        <span class="fw-semibold">+22°C</span>
+      </div>
+      <a href="#" class="btn btn-book">Book Now</a>
+    </div>
+
+  </div>
+</div>
+
+
+ <section class="luxury-section">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Text Section -->
+        <div class="col-md-6 luxury-text">
+          <h4 class="mb-4">Redefining Luxurious Getaways</h4>
+          <p style="text-align: justify;">
+            Of dawns that paint the skies in amber hues, of breeze that unfurls the mist, of treetops
+            that sway to the winds, of the verdant green that carpets the hillocks; discover the many
+            kaleidoscopic stories that unfold before your eyes and soak in the untainted natural beauty
+            with the Best 5 star Hotels in Munnar.
+          </p>
+          <p style="text-align: justify;">
+            Welcome to Amber Dale 5 star Resorts in Munnar, a luxurious nature retreat set in the idyllic
+            highlands, connecting the unforgettable experience of the undulating expanse of mountains,
+            sweeping meadows, meandering green hills and the cuddling fog. Treat yourself to the comforts
+            and opulence of our hospitality and service across our 57 luxurious rooms while you behold
+            yourself to the magnificent sights and tranquillity that Munnar has to offer.
+          </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="col-md-6">
+          <img src="room2.png" alt="Luxury Resort" class="luxury-image"/>
+        </div>
+
+      </div>
+    </div>
+  </section>
+   <section class="bg-image-section">
+    <!-- You can insert overlay content here if needed -->
+  </section>
+
+
+
+  <section class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-5">Amenities</h3>
+    <div class="row">
+      
+      <!-- Amenity -->
+      <div class="col-6 col-md-4 col-lg-2 amenity-item">
+        <img src="Wifi icon.png" class="amenity-icon" alt="Free Wi-Fi">
+        <p>Free wi-fi</p>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 amenity-item">
+        <img src="Parking icon.png" class="amenity-icon" alt="Free Parking">
+        <p>Free Parking</p>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 amenity-item">
+        <img src="Restraunt icon.png" class="amenity-icon" alt="Restaurant">
+        <p>Restaurant</p>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 amenity-item">
+        <img src="Reading Room icon.png" class="amenity-icon" alt="Room Service">
+        <p>Room Service</p>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 amenity-item">
+        <img src="safety.png" class="amenity-icon" alt="Doctor on Call">
+        <p>Doctor on call</p>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2 amenity-item">
+        <img src="safety.png" class="amenity-icon" alt="Safe Locker">
+        <p>Safe Locker</p>
+      </div>
+
+      <!-- Add more amenities as needed -->
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 room-carousel-wrapper">
+  <div class="container position-relative">
+
+    <!-- Carousel -->
+    <div class="owl-carousel owl-theme room-carousel">
+      
+      <!-- Card 1 -->
+      <div class="item">
+        <div class="room-card">
+  <img src="room1.png" alt="Madhura Room" class="room-image">
+  <div class="room-content">
+    <h5 class="room-title">MADHURA <small>(Honeymoon Suite With Jacuzzi)</small></h5>
+    <p class="room-description">
+      Feel enamored and enjoy an exclusive holiday experience with premium 5 Star resort facilities...
+    </p>
+    <div class="room-buttons">
+      <a href="#" class="room-btn-outline">Book Now</a>
+      <a href="#" class="room-btn-dark">More Details</a>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="item">
+        <div class="room-card">
+  <img src="room2.png" alt="Madhura Room" class="room-image">
+  <div class="room-content">
+    <h5 class="room-title">MADHURA <small>(Honeymoon Suite With Jacuzzi)</small></h5>
+    <p class="room-description">
+      Feel enamored and enjoy an exclusive holiday experience with premium 5 Star resort facilities...
+    </p>
+    <div class="room-buttons">
+      <a href="#" class="room-btn-outline">Book Now</a>
+      <a href="#" class="room-btn-dark">More Details</a>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <!-- Add more cards similarly... -->
+
+    </div>
+
+    <!-- Custom nav buttons (desktop only) -->
+    <button class="custom-nav prev d-none d-md-block">
+  <i class="fas fa-chevron-left"></i>
+</button>
+<button class="custom-nav next d-none d-md-block">
+  <i class="fas fa-chevron-right"></i>
+</button>
+
+
+  </div>
+</section>
+<section class="gallery-section py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">View Our Gallery</h3>
+    <div class="row g-3">
+      <!-- Main Image -->
+      <div class="col-md-6">
+        <a data-fancybox="gallery" href="nature-image.png">
+          <img src="nature-image.png" alt="Main Image" class="img-fluid w-100 rounded">
+        </a>
+      </div>
+
+      <!-- Right Side Images -->
+      <div class="col-md-6 d-flex flex-column justify-content-between">
+        <div class="mb-3">
+          <a data-fancybox="gallery" href="room1.png">
+            <img src="room1.png" alt="Top Right" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+        <div>
+          <a data-fancybox="gallery" href="room2.png">
+            <img src="room2.png" alt="Bottom Right" class="img-fluid w-100 rounded">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section py-5">
+  <div class="container text-center">
+    <h3 class="mb-4">Guest Speaks</h3>
+
+    <div class="owl-carousel owl-theme testimonial-carousel">
+
+      <!-- Testimonial Item -->
+      <div class="testimonial-item">
+        <h5 class="testimonial-name">Sana Mahajan</h5>
+        <p class="testimonial-message">
+          No words to describe how wonderful our experience at Amberdale has been. The rooms are super spacious
+          and so beautiful but what’s more beautiful and mesmerizing is the view from the room...
+        </p>
+      </div>
+
+      <!-- Add more testimonial items similarly -->
+      <div class="testimonial-item">
+        <h5 class="testimonial-name">John D'Souza</h5>
+        <p class="testimonial-message">
+          Absolutely loved the service, the location, and the peacefulness. Highly recommended for a relaxing weekend!
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <div class="container">
+  <div class="row align-items-center go-next-section">
+    
+    <!-- Text Section -->
+    <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
+      <h3 class="fw-bold mb-4">WHERE WILL YOU GO NEXT?</h3>
+      <p class="mb-4">You are spoiled of choice with our unique destinations,<br>our hotel and resorts</p>
+      <a href="#" class="go-next-btn">Book Now</a>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-md-6">
+      <img src="blog3.png" alt="Pool" class="go-next-img">
+    </div>
+
+  </div>
+</div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <script>
+Fancybox.bind("[data-fancybox='gallery']", {
+    Thumbs: false,
+    Toolbar: true,
+  });
+
+
+
+     const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000, // Speed in milliseconds (1000 = 1 second)
+  speedAsDuration: true // Always takes the set time no matter how far
+  
+});
+Scrollbar.init(document.querySelector('#scroll-container'), {
+    
+  });
+const navbar = document.querySelector('.navbar');
+const collapse = document.getElementById('navbarNav');
+const toggleBtn = document.querySelector('.navbar-toggler');
+
+// Initialize smooth scrollbar
+const scrollbar = Scrollbar.init(document.querySelector('#scroll-container'), {
+  damping: 0.08
+});
+
+function updateNavbarState(yOffset) {
+  if (collapse.classList.contains('show') || yOffset > 10) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+}
+
+// Listen to custom scrollbar scroll event
+scrollbar.addListener(({ offset }) => {
+  updateNavbarState(offset.y);
+});
+
+// Toggle clicked
+toggleBtn.addEventListener('click', () => {
+  setTimeout(() => {
+    updateNavbarState(scrollbar.offset.y);
+  }, 200);
+});
+
+
+
+$(document).ready(function(){
+  const owl = $('.room-carousel');
+  
+  owl.owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+
+  // Custom navigation
+  $('.next').click(function() {
+    owl.trigger('next.owl.carousel');
+  });
+
+  $('.prev').click(function() {
+    owl.trigger('prev.owl.carousel');
+  });
+});
+$(document).ready(function(){
+  $(".testimonial-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    dots: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 800
+  });
+});
+  </script>
+</body>
+</html>

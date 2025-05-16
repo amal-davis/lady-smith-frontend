@@ -2,55 +2,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 body {
   font-family: "Poppins", sans-serif;
-}
-  
-html, body {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* iOS smoothness */
-}
-html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   
 }
  html,body {
     overflow-x: hidden !important;
   }
+=======
+  overflow-x: hidden; /* prevent horizontal scroll only */
+}
+
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+>>>>>>> 2205c14 (updated files)
 #scroll-container {
   height: 100%;
-  overflow: auto; /* Let Smooth Scrollbar control scrolling */
+  overflow-y: auto;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1.5s ease, transform 1.5s ease; /* Slower transition */
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.fade-in,
 .fade-in-left,
 .fade-in-right {
   opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
+.fade-in {
+  transform: translateY(50px);
+}
 .fade-in-left {
-  transform: translateX(-50px);
+  transform: translateX(-30px); /* reduce to prevent overflow */
+}
+.fade-in-right {
+  transform: translateX(30px); /* reduce to prevent overflow */
 }
 
+.fade-in.show,
 .fade-in-left.show,
 .fade-in-right.show {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate(0);
 }
+
 
 
 
