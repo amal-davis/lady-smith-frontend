@@ -6,15 +6,13 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   
 }
  html,body {
     overflow-x: hidden !important;
   }
-=======
-  overflow-x: hidden; /* prevent horizontal scroll only */
-}
+
+
 
 html, body {
   scroll-behavior: smooth;
@@ -22,7 +20,6 @@ html, body {
   height: 100%;
 }
 
->>>>>>> 2205c14 (updated files)
 #scroll-container {
   height: 100%;
   overflow-y: auto;
@@ -733,47 +730,82 @@ html, body {
       font-size: 1.5rem;
     }
   }
-  .footer-section {
-    background: url('footer-bg.jpg') no-repeat center center/cover;
-    position: relative;
-    color: white;
-    min-height: 400px; /* or height: 400px; */
-  }
+.footer-section {
+  background: url('footer-background.png') center center/cover no-repeat;
+  color: #fff;
   
-  .footer-overlay {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.9));
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
-  
-  .footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 0;
+}
+a{
+  text-decoration: none !important;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
     font-family: 'Volkhov', serif;
-    font-size: 1.6rem;
+
+
+}
+
+.footer-sub {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.icon-circle:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+.footer-bottom {
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    justify-content: flex-start; /* Don't push content to bottom */
+    min-height: auto;
+    height: auto;
   }
-  
-  .footer-section a {
-    color: white;
-    text-decoration: none;
+
+  .footer-logo {
+    font-size: 22px;
+    color: #000;
+    margin-top: 160px;
   }
-  
-  .footer-section a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-icon {
-    width: 36px;
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #00A651;
-    border-radius: 50%;
-    color: white;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  
-  .social-icon:hover {
-    background-color: #007f4f;
-  }
-      
+}
