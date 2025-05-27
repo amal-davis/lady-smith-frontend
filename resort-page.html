@@ -39,14 +39,14 @@
           <!-- Nav Links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav d-flex align-items-lg-center ms-auto me-lg-3 gap-lg-4">
-              <li class="nav-item"><a class="nav-link " href="#">HOME</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">ACCOMMODATIONS</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">DINING</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">PACKAGES</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">ACTIVITIES</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">BLOGS</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
-            </ul>
+          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">PROPERTIES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">PACKAGES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ROOMS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">BLOGS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
           </div>
     
           <!-- Book Now Button for Desktop -->
@@ -66,7 +66,7 @@
 </section>
 
 
-<div class="container-fluid resort-bar">
+<div class="container resort-bar">
   <div class="d-flex justify-content-between align-items-center flex-wrap">
     
     <!-- Resort Name and Location -->
@@ -122,11 +122,76 @@
       </div>
     </div>
   </section>
-   <section class="bg-image-section">
+  <section class="bg-image-section">
     <!-- You can insert overlay content here if needed -->
   </section>
 
+    <section class="container mt-5">
+      <div class="row align-items-center position-relative">
+        <!-- Left Content -->
+        <div class="col-lg-4 mb-4 mb-lg-0 fade-in-left">
+          <img src="leaf1.png" alt="Decorative Leaf" class="leaf-decors">
 
+          <p class=" fw-semibold" style="color: #17BF9E;">Weekend Escapes</p>
+          <h2 class="fw-bold mt-3" style=" font-family: 'Volkhov', serif; color: #007f4f;">All Packages</h2>
+          <p class="mt-5">Whether you're after a quick weekend escape, a family retreat, or a full digital detox, we've
+            got the perfect forest stay for you.</p>
+          <a href="#" class="btn btn-green mt-5">Book now</a>
+  
+          <!-- Navigation Buttons -->
+          <div class="d-flex gap-3 mt-5">
+            <button class="nav-btn prevs-btn rounded-circle  btn-outline-dark">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn nexts-btn rounded-circle">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Carousel -->
+        <div class="col-lg-8 fade-in-right ">
+
+          <div class="owl-carousel owl-theme" id="packageCarousel">
+            <!-- Card 1 -->
+            <div class="card package-card">
+              <img src="rome.png" class="card-img-top" alt="Rome">
+              <div class="card-body py-5" >
+                <div class="d-flex justify-content-between mb-1">
+                  <h6 class="mb-0">Rome, Italy</h6>
+                  <span>$5.42k</span>
+                </div>
+                <p class="mb-0 mt-3"><i class="ri-send-plane-fill"></i>&nbsp;10 Days Trip</p>
+              </div>
+            </div>
+  
+            <!-- Card 2 -->
+            <div class="card package-card">
+              <img src="london.jpg" class="card-img-top" alt="London">
+              <div class="card-body py-5">
+                <div class="d-flex justify-content-between mb-1">
+                  <h6 class="mb-0">London, UK</h6>
+                  <span>$4.2k</span>
+                </div>
+                <p class="mb-0 mt-3"><i class="ri-send-plane-fill"></i>&nbsp;12 Days Trip</p>
+              </div>
+            </div>
+  
+            <!-- Card 3 -->
+            <div class="card package-card">
+              <img src="europe.png" class="card-img-top" alt="Europe">
+              <div class="card-body py-5">
+                <div class="d-flex justify-content-between mb-1">
+                  <h6 class="mb-0">Full Europe</h6>
+                  <span>$15k</span>
+                </div>
+                <p class="mb-0 mt-3"><i class="ri-send-plane-fill"></i>&nbsp;28 Days Trip</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <section class="py-5">
   <div class="container">
@@ -155,7 +220,7 @@
       </div>
 
       <div class="col-6 col-md-4 col-lg-2 amenity-item">
-        <img src="safety.png" class="amenity-icon" alt="Doctor on Call">
+        <img src="Hospital icon.png" class="amenity-icon" alt="Doctor on Call">
         <p>Doctor on call</p>
       </div>
 
@@ -172,6 +237,7 @@
 
 <section class="py-5 room-carousel-wrapper">
   <div class="container position-relative">
+       <h3 class="text-center mb-5">Our Rooms</h3>
 
     <!-- Carousel -->
     <div class="owl-carousel owl-theme room-carousel">
@@ -225,63 +291,222 @@
 
   </div>
 </section>
+ <section class="testimonial-section py-5" style="background-color: #DAE7E5;">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side Text -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h6 class="" style="color: #17BF9E;">Guest Reviews</h6>
+            <h2 class="fw-bold" style="color: #086D59;    font-family: 'Volkhov', serif;">Voices from the <br> Woods</h2>
+            <p class="my-3">Forest Haven Retreat was built with a love for the woods and a passion for sustainable living. Located in a protected forest reserve, we provide cozy,</p>
+            
+            <div class="d-flex gap-3 mt-4">
+              <button class="btn nav-btn prev-btns"><i class="fas fa-arrow-left"></i></button>
+              <button class="btn nav-btn next-btns"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+          </div>
+    
+          <!-- Right Side Owl Carousel -->
+          <div class="col-lg-6">
+            <div class="owl-carousel owl-theme testimonial-carousel">
+              <!-- Single Card -->
+              <div class="item">
+                <div class="testimonial-card p-4">
+                  <i class="fas fa-quote-left fa-2x text-success mb-2"></i>
+                  <h5 class="fw-semibold">Stay at one of our Locations</h5>
+                  <p class="mb-2">Forest Haven Retreat was built with a love for the woods and a passion for sustainable living. Located in a protected forest reserve, we provide cozy,</p>
+                  <p class="fw-bold mb-0">Ali Tufan</p>
+                  <small>Product Manager, Apple Inc.</small>
+                  <div class="rating mt-2">
+                    <span class="text-warning">4.8 ★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-card p-4">
+                  <i class="fas fa-quote-left fa-2x text-success mb-2"></i>
+                  <h5 class="fw-semibold">Stay at one of our Locations</h5>
+                  <p class="mb-2">Forest Haven Retreat was built with a love for the woods and a passion for sustainable living. Located in a protected forest reserve, we provide cozy,</p>
+                  <p class="fw-bold mb-0">Ali Tufan</p>
+                  <small>Product Manager, Apple Inc.</small>
+                  <div class="rating mt-2">
+                    <span class="text-warning">4.8 ★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-card p-4">
+                  <i class="fas fa-quote-left fa-2x text-success mb-2"></i>
+                  <h5 class="fw-semibold">Stay at one of our Locations</h5>
+                  <p class="mb-2">Forest Haven Retreat was built with a love for the woods and a passion for sustainable living. Located in a protected forest reserve, we provide cozy,</p>
+                  <p class="fw-bold mb-0">Ali Tufan</p>
+                  <small>Product Manager, Apple Inc.</small>
+                  <div class="rating mt-2">
+                    <span class="text-warning">4.8 ★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Copy above block and paste two more times for 3 total cards -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="tree1.png" alt="leaf Decor" class="tree-decor">
+</section>
 <section class="gallery-section py-5">
   <div class="container">
     <h3 class="text-center mb-4">View Our Gallery</h3>
-    <div class="row g-3">
-      <!-- Main Image -->
-      <div class="col-md-6">
+    <div class="row g-4">
+      <!-- First Row -->
+      <div class="col-md-4 col-sm-6">
         <a data-fancybox="gallery" href="nature-image.png">
-          <img src="nature-image.png" alt="Main Image" class="img-fluid w-100 rounded">
+          <img src="nature-image.png" alt="Gallery 1" class="img-fluid rounded shadow-sm">
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a data-fancybox="gallery" href="room1.png">
+          <img src="room1.png" alt="Gallery 2" class="img-fluid rounded shadow-sm">
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a data-fancybox="gallery" href="room2.png">
+          <img src="room2.png" alt="Gallery 3" class="img-fluid rounded shadow-sm">
         </a>
       </div>
 
-      <!-- Right Side Images -->
-      <div class="col-md-6 d-flex flex-column justify-content-between">
-        <div class="mb-3">
-          <a data-fancybox="gallery" href="room1.png">
-            <img src="room1.png" alt="Top Right" class="img-fluid w-100 rounded">
-          </a>
-        </div>
-        <div>
-          <a data-fancybox="gallery" href="room2.png">
-            <img src="room2.png" alt="Bottom Right" class="img-fluid w-100 rounded">
-          </a>
-        </div>
+      <!-- Second Row -->
+      <div class="col-md-4 col-sm-6">
+        <a data-fancybox="gallery" href="blog1.png">
+          <img src="blog1.png" alt="Gallery 4" class="img-fluid rounded shadow-sm">
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a data-fancybox="gallery" href="blog2.png">
+          <img src="blog2.png" alt="Gallery 5" class="img-fluid rounded shadow-sm">
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a data-fancybox="gallery" href="blog3.png">
+          <img src="blog3.png" alt="Gallery 6" class="img-fluid rounded shadow-sm">
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="testimonial-section py-5">
-  <div class="container text-center">
-    <h3 class="mb-4">Guest Speaks</h3>
 
-    <div class="owl-carousel owl-theme testimonial-carousel">
+    <section class="contact-section py-5 position-relative">
+        <img src="tree6.png" alt="Leaf Decor" class="leaf-decor-left">
 
-      <!-- Testimonial Item -->
-      <div class="testimonial-item">
-        <h5 class="testimonial-name">Sana Mahajan</h5>
-        <p class="testimonial-message">
-          No words to describe how wonderful our experience at Amberdale has been. The rooms are super spacious
-          and so beautiful but what’s more beautiful and mesmerizing is the view from the room...
-        </p>
-      </div>
-
-      <!-- Add more testimonial items similarly -->
-      <div class="testimonial-item">
-        <h5 class="testimonial-name">John D'Souza</h5>
-        <p class="testimonial-message">
-          Absolutely loved the service, the location, and the peacefulness. Highly recommended for a relaxing weekend!
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
   <div class="container">
+    <div class="row g-4 align-items-start">
+      
+      <!-- Left Side: Contact Info -->
+      <!-- Left Side: Contact Info -->
+<div class="col-md-6">
+  <h2 class="fw-bold mb-4">Get in Touch</h2>
+
+  <!-- Email -->
+  <div class="d-flex align-items-start mb-5">
+    <div class="icon-wrapper me-3">
+      <i class="fas fa-envelope fa-lg text-white"></i>
+    </div>
+    <div>
+      <strong>Email</strong><br>
+      <a href="mailto:support@holitoor.com" class="text-dark">support@holitoor.com</a>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div class="d-flex align-items-start mb-5">
+    <div class="icon-wrapper me-3">
+      <i class="fas fa-phone fa-lg text-white"></i>
+    </div>
+    <div>
+      <strong>Phone</strong><br>
+      <a href="tel:+971544471168" class="text-dark">+971544471168</a>
+    </div>
+  </div>
+
+  <!-- Address -->
+  <div class="d-flex align-items-start mb-5">
+    <div class="icon-wrapper me-3">
+      <i class="fas fa-map-marker-alt fa-lg text-white"></i>
+    </div>
+    <div>
+      <strong>Address</strong><br>
+      <p class="mb-0">
+        Intelak Hub, Ground Floor,
+        Offices 4 One Central,<br>
+        Dubai World Trade Center,<br>
+        Dubai, UAE.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Right Side: Contact Form -->
+      <div class="col-md-6">
+        <div class="p-4 shadow rounded bg-white">
+          <h4 class="fw-bold mb-4">Submit your Enquiry</h4>
+          <form>
+  <div class="row">
+    <!-- First Name -->
+    <div class="col-md-6 mb-3">
+      <label class="form-label" style="font-size: 13px;">First Name*</label>
+      <input type="text" class="form-control shadow-none" placeholder="Enter your name">
+    </div>
+
+    <!-- Last Name -->
+    <div class="col-md-6 mb-3">
+      <label class="form-label" style="font-size: 13px;">Last Name*</label>
+      <input type="text" class="form-control shadow-none" placeholder="Enter last name">
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-6 mb-3">
+      <label class="form-label" style="font-size: 13px;">Email*</label>
+      <input type="email" class="form-control shadow-none" placeholder="Enter email">
+    </div>
+
+    <!-- Phone -->
+    <div class="col-md-6 mb-3">
+      <label class="form-label" style="font-size: 13px;">Mobile Number*</label>
+      <div class="input-group">
+        <input type="text" class="form-control rounded-0 shadow-none border" placeholder="Enter Phone number">
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="col-12 mb-3">
+      <label class="form-label" style="font-size: 13px;">Your message*</label>
+      <textarea class="form-control shadow-none" rows="4" placeholder="Enter your message"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="col-12 text-end">
+      <button type="submit" class="btn px-4 fw-bold" style="background-color: #17BF9E; color: #fff;">
+        Submit
+      </button>
+    </div>
+  </div>
+</form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <div class="container mt-5 position-relative go-next-wrapper">
+  <!-- Decorative Leaf Image -->
+  <img src="tree4.png" alt="Leaf" class="leaf-decor">
+
   <div class="row align-items-center go-next-section">
-    
     <!-- Text Section -->
     <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
       <h3 class="fw-bold mb-4">WHERE WILL YOU GO NEXT?</h3>
@@ -290,72 +515,97 @@
     </div>
 
     <!-- Image Section -->
-    <div class="col-md-6">
+    <div class="col-md-6 position-relative z-2">
       <img src="blog3.png" alt="Pool" class="go-next-img">
     </div>
-
   </div>
 </div>
 
 
+
+
 <footer class="footer-section py-5 mt-5">
   <!-- Main Content Section -->
-  <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1; text-decoration: none;">
+  <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
     <div class="row">
       <!-- Logo & Contact -->
       <div class="col-md-4 mb-4">
         <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
         <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
-        <a href="mailto:help@vistours.com" class="text-white text-decoration-none">help@vistours.com</a>
+        <a href="mailto:help@vistours.com">help@vistours.com</a>
       </div>
 
       <!-- Support Links 1 -->
       <div class="col-md-2 mb-4">
-        <h5>Support</h5>
-        <ul class="list-unstyled" style="text-decoration: none;">
-          <li><a href="#" class="text-white">Get in Touch</a></li>
-          <li><a href="#" class="text-white">Help Center</a></li>
-          <li><a href="#" class="text-white">Live Chat</a></li>
-          <li><a href="#" class="text-white">How it Works</a></li>
+        <h5 class="mb-3">Support</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#">Get in Touch</a></li>
+          <li class="mb-3"><a href="#">Help Center</a></li>
+          <li class="mb-3"><a href="#">Live Chat</a></li>
+          <li class="mb-3"><a href="#">How it Works</a></li>
         </ul>
       </div>
 
       <!-- Support Links 2 -->
       <div class="col-md-2 mb-4">
-        <h5>Support</h5>
-        <ul class="list-unstyled" style="text-decoration: none;">
-          <li><a href="#" class="text-white">Get in Touch</a></li>
-          <li><a href="#" class="text-white">Help Center</a></li>
-          <li><a href="#" class="text-white">Live Chat</a></li>
-          <li><a href="#" class="text-white">How it Works</a></li>
+        <h5 class="mb-3">Support</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#">Get in Touch</a></li>
+          <li class="mb-3"><a href="#">Help Center</a></li>
+          <li class="mb-3"><a href="#">Live Chat</a></li>
+          <li class="mb-3"><a href="#">How it Works</a></li>
         </ul>
       </div>
 
       <!-- Social Media -->
       <div class="col-md-4 mb-4 text-md-end text-start">
         <h5>Follow Us</h5>
-        <div class="social-icons mt-3"  style="text-decoration: none;">
-          <a href="#" class="icon-circle me-2"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="icon-circle me-2"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="icon-circle"><i class="fab fa-twitter"></i></a>
+        <div class="social-icons mt-3">
+          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon-circle" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bottom Section (Border + Footer Links) -->
-  <div class="footer-bottom position-relative" style="z-index: 1;">
+  <!-- Leaf image between content & bottom -->
+  <!-- Leaf image between content & bottom -->
+<div class="footer-leaf-wrapper text-center my-5">
+  <!-- Left image -->
+  <img src="tree7.png" alt="Left Leaf Decor" class="footer-leaf footer-leaf-left">
+
+  <!-- Right image -->
+  <img src="tree8.png" alt="Right Leaf Decor" class="footer-leaf footer-leaf-right">
+</div>
+
+
+  <!-- Bottom Section -->
+   <div class="container">
+    <!-- Center image above footer-bottom -->
+<div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
+  <img src="grass-flat.png" alt="Left Decor" class="footer-side-image">
+  <img src="grass-flat.png" alt="Center Decor" class="footer-center-image">
+  <img src="grass-flat.png" alt="Right Decor" class="footer-side-image">
+</div>
+
+
+
+<div class="footer-bottom position-relative">
     <div class="container d-md-flex justify-content-between text-center text-md-start small">
       <div>&copy; 2025 LADY SMITH. All Rights Reserved.</div>
       <div>
-        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
-        <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#" class="ms-3">Terms of Use</a>
       </div>
     </div>
   </div>
+   </div>
+  
 </footer>
 
-      </div>
+
+</div>
 
 
 
@@ -381,6 +631,41 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
   <script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".footer-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          footer.classList.add("animate-leaf");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (footer) observer.observe(footer);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".footer-section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          footer.classList.add("animate-leaf");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (footer) observer.observe(footer);
+});
+
 Fancybox.bind("[data-fancybox='gallery']", {
     Thumbs: false,
     Toolbar: true,
@@ -451,15 +736,52 @@ $(document).ready(function(){
     owl.trigger('prev.owl.carousel');
   });
 });
-$(document).ready(function(){
-  $(".testimonial-carousel").owlCarousel({
-    items: 1,
+  $(document).ready(function () {
+  var testimonialOwl = $('.testimonial-carousel');
+  testimonialOwl.owlCarousel({
     loop: true,
-    dots: true,
+    margin: 20,
     nav: false,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    smartSpeed: 800
+    dots: false,
+    autoplay: true,                // ✅ Enable autoplay
+    autoplayTimeout: 3000,         // ✅ 3 seconds between slides
+    autoplayHoverPause: true,      // ✅ Pause on hover
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 2 }
+    }
+  });
+
+  // Navigation buttons
+  $('.next-btns').click(function () {
+    testimonialOwl.trigger('next.owl.carousel');
+  });
+
+  $('.prev-btns').click(function () {
+    testimonialOwl.trigger('prev.owl.carousel');
+  });
+});
+ $(document).ready(function () {
+  var packageOwl = $('#packageCarousel');
+  packageOwl.owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+
+  // Trigger for package carousel
+  $('.nexts-btn').click(function () {
+    packageOwl.trigger('next.owl.carousel');
+  });
+
+  $('.prevs-btn').click(function () {
+    packageOwl.trigger('prev.owl.carousel');
   });
 });
   </script>
