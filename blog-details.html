@@ -19,22 +19,180 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
 </head>
 <style>
-    .blog-detail h1 {
-        font-size: 2rem;
-    }
+.custom-heading {
+  font-family: 'Georgia', serif;
+  line-height: 1.2;
+  word-break: break-word;
+}
 
+@media (max-width: 576px) {
+  .custom-heading {
+    font-size: 1.8rem;
+  }
+}
+/* Paragraph Text */
+.paragraph-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 800px;
+}
 
+/* Big Quotation Icon */
+.quote-icon {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #00C7A0; /* Dark blue */
+  line-height: 1;
+}
 
-    @media (max-width: 767.98px) {
-        .blog-detail h1 {
-            font-size: 1.8rem;
-        }
+/* Quote Text Styling */
+.quote-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  color: #00C7A0;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
 
-        .blog-detail h4 {
-            font-size: 1.2rem;
-        }
+/* Author Name */
+.quote-author {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
 
-    }
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .quote-icon {
+    font-size: 3rem;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+
+  .paragraph-text {
+    font-size: 0.95rem;
+  }
+}
+.recent-posts-box {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 991.98px) {
+  /* Remove sticky behavior on tablets & mobile */
+  .recent-posts-box {
+    position: static !important;
+    top: auto !important;
+    margin-top: 2rem;
+  }
+}
+ .hero-banner {
+  background-image: url('bg-2.png'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 500px;
+}
+
+/* Dark overlay with brightness effect */
+.hero-banner .overlay {
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+  height: 100%;
+  width: 100%;
+  padding: 40px 20px;
+  backdrop-filter: brightness(0.8);
+}
+
+/* Brand text styling */
+.brand-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+}
+
+/* Responsive heading */
+@media (max-width: 576px) {
+  .hero-banner {
+    height: 400px;
+  }
+
+  .hero-banner .overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-banner .overlay h6 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+.share-icon {
+  background-color: #00C7A0;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.share-icon:hover {
+  background-color: #086D59;
+}
+.image-text-section img {
+  object-fit: cover;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  .image-text-section {
+    padding: 2rem 1rem;
+  }
+
+  .image-text-section img {
+    margin-bottom: 1rem;
+  }
+}
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #086D59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #086D59 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
+
+.icon-circle:hover {
+  background-color: #086D59;
+  color: white !important;
+  text-decoration: none;
+}
+.icon-circle a{
+  color: #086D59;
+}
+/* Optional: Adjust icon spacing on smaller screens */
+@media (max-width: 576px) {
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
 </style>
 
 <body>
@@ -93,155 +251,229 @@
 
 
 
-        <section class="blog-detail py-5">
-            <div class="container">
+<section class="blog-layout-section py-5 px-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Section -->
+      <div class="col-lg-8 mb-4">
+        <!-- Upper Heading -->
+        <h1 class="display-5 fw-light custom-heading">
+          These are the top <span class="fw-normal">7</span> luxury hotels in the world
+        </h1>
+        <section class="share-section py-4">
+  <div class="container d-flex flex-wrap align-items-center gap-3">
+    
+    <!-- Share Text & Count -->
+    <div>
+      <h6 class="fw-semibold mb-1">Share this</h6>
+      <div class="text-center">
+        <div class="fw-bold fs-5">88</div>
+        <small class="text-muted">SHARES</small>
+      </div>
+    </div>
 
-                <!-- Top Image -->
-                <div class="mb-4 text-center">
-                    <img src="blog3.png" alt="Blog Banner" class="img-fluid rounded">
-                </div>
+    <!-- Share Icons -->
+    <div class="d-flex gap-2">
+      <a href="#" class="share-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="share-icon"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="share-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="share-icon"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
 
-                <!-- Date -->
-                <div class="d-flex align-items-center mb-3 text-muted">
-                    <i class="fas fa-calendar-alt me-2" style="color: #00C7A0;"></i>
-                    <small>21-04-2025</small>
-                </div>
+        <!-- Short Description -->
+        <p class="text-muted mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</p>
 
-                <!-- Blog Title -->
-                <h1 class="fw-bold mb-4 display-5">Discover Unforgettable Stays: Kuruva Island Resort Packages in
-                    Wayanad</h1>
+        <!-- Main Image -->
+        <img src="blog3.png" class="img-fluid w-100 rounded" alt="Main Blog Image">
 
-                <!-- Blog Sub Title -->
-                <h4 class="fw-semibold mb-3 text-dark">
-                    1. Special Honeymoon Package—Romance in Nature's Embrace
-                </h4>
+         <p class="text-muted mb-4 paragraph-text mt-5">
+      Qam viverra orci sagittis eu volutpat odio facilisis. Sapien eget mi proin sed libero enim sed. 
+      Lobortis scelerisque fermentum dui faucibus in ornare quam. Mattis pellentesque id nibh tortor. 
+      Eget nunc lobortis mattis aliquam faucibus purus in...
+    </p>
+     <div class="quote-block d-flex align-items-start mt-5">
+      <!-- Big Quotation Icon -->
+      <div class="quote-icon me-3">“</div>
 
-                <!-- Blog Content -->
-                <p class="text-muted mb-3">
-                    Ideal for couples seeking a peaceful yet luxurious getaway, our
-                    <span class="fw-bold" style="color: #00C7A0;">Honeymoon Packages in Wayanad</span>
-                    include stays in stunning cottages with private pools, plunge pools, or Jacuzzi suites.
-                    From candlelit dinners to flower bed decorations and spa therapies, this package is about intimate
-                    moments surrounded by breathtaking beauty.
-                </p>
+      <!-- Quote Content -->
+      <div>
+        <p class="quote-text">
+          Dictum varius duis at consectetur lorem donec massa sapien faucibus. 
+          Tincidunt arcu non sodales neque sodales ut etiam sit amet.
+        </p>
+        <p class="quote-author mb-0">— Jenny Wilson</p>
+      </div>
+      
+
+    </div>
+    <section class="image-text-section py-5 px-3">
+  <div class="container">
+    
+    <!-- Top Image Row -->
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <img src="room1.png" alt="Image 1" class="img-fluid w-100 rounded">
+      </div>
+      <div class="col-md-6">
+        <img src="room2.png" alt="Image 2" class="img-fluid w-100 rounded">
+      </div>
+    </div>
+
+    <!-- Bottom Text -->
+    <div class="row">
+      <div class="col-12">
+        <p>
+          Phasellus non placerat ex. Aenean sem nulla, pharetra vel nisl ut, luctus ullamcorper lorem.
+          Vivamus suscipit a ipsum eu elementum. In ut dictum lectus. Nullam tincidunt ante ac ex viverra, 
+          vel interdum lectus bibendum. Fusce a dignissim mi...
+        </p>
+        <p>
+          Etiam hendrerit libero eget tempus tempor. Vivamus et libero mollis, malesuada eros at, egestas sem. 
+          Quisque ligula erat, tempus non rhoncus nec, congue non urna. Nulla id semper nibh...
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+      </div>
+
+      <!-- Right Section (Fixed on Large Screens) -->
+      <div class="col-lg-4">
+  <!-- Sticky box wrapper with styles -->
+  <div class="recent-posts-box position-lg-sticky p-4 bg-white" style="top: 100px;">
+    <h4 class="custom-heading mb-4">Recent Posts</h4>
+
+    <!-- Recent Post Cards -->
+    <div class="d-flex mb-4">
+      <img src="room1.png" class="img-fluid me-3 rounded" style="width: 70px; height: 70px; object-fit: cover;" alt="Thumb 1">
+      <div>
+        <small class="text-muted d-block">August 1, 2023</small>
+        <p class="mb-0 small">These are the top 7 luxury hotels in the world</p>
+      </div>
+    </div>
+
+    <div class="d-flex mb-4">
+      <img src="room2.png" class="img-fluid me-3 rounded" style="width: 70px; height: 70px; object-fit: cover;" alt="Thumb 2">
+      <div>
+        <small class="text-muted d-block">August 1, 2023</small>
+        <p class="mb-0 small">9 Reasons to Vacation in Overwater Bungalows</p>
+      </div>
+    </div>
+
+    <div class="d-flex">
+      <img src="blog3.png" class="img-fluid me-3 rounded" style="width: 70px; height: 70px; object-fit: cover;" alt="Thumb 3">
+      <div>
+        <small class="text-muted d-block">August 1, 2023</small>
+        <p class="mb-0 small">5 Places to Visit This Spring</p>
+      </div>
+    </div>
+  </div>
+  <section class="hero-banner text-center text-white mt-5">
+  <div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="container">
+      <h5 class="brand-name mb-3">MIKALTO<br><small class="fs-6 fw-normal">HOTELS & RESORTS</small></h5>
+      <h6 class="fw-bold">COME</h6>
+      <h6 class="fw-bold">STAY & ENJOY</h6>
+      <h2 class="display-5 fw-bold mb-4">YOUR DAY</h2>
+      <a href="#" class="btn btn-light text-dark fw-bold px-4 py-2">BOOK NOW</a>
+    </div>
+  </div>
+</section>
+</div>
+
+    </div>
+  </div>
+</section>
+
+    
+
+<footer class="footer-section py-5 mt-5">
+  <!-- Main Content Section -->
+  <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
+    <div class="footer-logo-trust text-center mb-4">
+    <img src="bookingccom.png" alt="Booking.com" class="footer-trust-logo me-3">
+    <img src="trip-advisory.png" alt="Tripadvisor" class="footer-trust-logo">
+  </div>
+    <div class="row mt-5">
+      <!-- Logo & Contact -->
+      <div class="col-md-4 mb-4">
+        <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
+        <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
+        <a href="mailto:help@vistours.com">help@vistours.com</a>
+      </div>
+
+      <!-- Support Links 1 -->
+      <div class="col-md-2 mb-4">
+        <h5 class="mb-3">Support</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#">Get in Touch</a></li>
+          <li class="mb-3"><a href="#">Help Center</a></li>
+          <li class="mb-3"><a href="#">Live Chat</a></li>
+          <li class="mb-3"><a href="#">How it Works</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Links 2 -->
+      <div class="col-md-2 mb-4">
+        <h5 class="mb-3">Support</h5>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#">Get in Touch</a></li>
+          <li class="mb-3"><a href="#">Help Center</a></li>
+          <li class="mb-3"><a href="#">Live Chat</a></li>
+          <li class="mb-3"><a href="#">How it Works</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4 text-md-end text-start">
+        <h5>Follow Us</h5>
+       <div class="social-icons mt-3 d-flex">
+  <a href="#" class="icon-circle me-2"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle me-2"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fab fa-youtube"></i></a>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaf image between content & bottom -->
+  <!-- Leaf image between content & bottom -->
+<div class="footer-leaf-wrapper text-center my-5">
+  <!-- Left image -->
+  <img src="tree7.png" alt="Left Leaf Decor" class="footer-leaf footer-leaf-left">
+
+  <!-- Right image -->
+  <img src="tree8.png" alt="Right Leaf Decor" class="footer-leaf footer-leaf-right">
+</div>
+
+
+  <!-- Bottom Section -->
+   <div class="container">
+    <!-- Center image above footer-bottom -->
+<div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
+  <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+</div>
 
 
 
-                <h4 class="fw-semibold mb-3 text-dark">
-                    2. 7-Day Ayurvedic Holistic Treatment Package—Wellness Redefined
-                </h4>
-
-                <!-- Blog Content -->
-                <p class="text-muted mb-3">
-                    Reconnect with your body, mind, and spirit through our Ayurvedic Holistic Treatment Package. With
-                    guidance from experienced Ayurvedic therapists, you'll undergo detox therapies, daily yoga and
-                    pranayama, and a sattvic diet—all set within the tranquillity of Kuruva Island.
-                </p>
-
-            </div>
-        </section>
-
-        <div class="container mt-5 position-relative go-next-wrapper">
-            <!-- Decorative Leaf Image -->
-            <img src="tree4.png" alt="Leaf" class="leaf-decor">
-
-            <div class="row align-items-center go-next-section">
-                <!-- Text Section -->
-                <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
-                    <h3 class="fw-bold mb-4">WHERE WILL YOU GO NEXT?</h3>
-                    <p class="mb-4">You are spoiled of choice with our unique destinations,<br>our hotel and resorts</p>
-                    <a href="#" class="go-next-btn">Book Now</a>
-                </div>
-
-                <!-- Image Section -->
-                <div class="col-md-6 position-relative z-2">
-                    <img src="blog3.png" alt="Pool" class="go-next-img">
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer-section py-5 mt-5">
-            <!-- Main Content Section -->
-            <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
-                <div class="row">
-                    <!-- Logo & Contact -->
-                    <div class="col-md-4 mb-4">
-                        <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
-                        <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
-                        <a href="mailto:help@vistours.com">help@vistours.com</a>
-                    </div>
-
-                    <!-- Support Links 1 -->
-                    <div class="col-md-2 mb-4">
-                        <h5 class="mb-3">Support</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><a href="#">Get in Touch</a></li>
-                            <li class="mb-3"><a href="#">Help Center</a></li>
-                            <li class="mb-3"><a href="#">Live Chat</a></li>
-                            <li class="mb-3"><a href="#">How it Works</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Support Links 2 -->
-                    <div class="col-md-2 mb-4">
-                        <h5 class="mb-3">Support</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><a href="#">Get in Touch</a></li>
-                            <li class="mb-3"><a href="#">Help Center</a></li>
-                            <li class="mb-3"><a href="#">Live Chat</a></li>
-                            <li class="mb-3"><a href="#">How it Works</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="col-md-4 mb-4 text-md-end text-start">
-                        <h5>Follow Us</h5>
-                        <div class="social-icons mt-3">
-                            <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="#" class="icon-circle" style="font-size: 18px; color: #086D59 !important;"><i
-                                    class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Leaf image between content & bottom -->
-            <!-- Leaf image between content & bottom -->
-            <div class="footer-leaf-wrapper text-center my-5">
-                <!-- Left image -->
-                <img src="tree7.png" alt="Left Leaf Decor" class="footer-leaf footer-leaf-left">
-
-                <!-- Right image -->
-                <img src="tree8.png" alt="Right Leaf Decor" class="footer-leaf footer-leaf-right">
-            </div>
-
-
-            <!-- Bottom Section -->
-            <div class="container">
-                <!-- Center image above footer-bottom -->
-                <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
-                    <img src="grass-flat.png" alt="Left Decor" class="footer-side-image">
-                    <img src="grass-flat.png" alt="Center Decor" class="footer-center-image">
-                    <img src="grass-flat.png" alt="Right Decor" class="footer-side-image">
-                </div>
-
-
-
-                <div class="footer-bottom position-relative">
-                    <div class="container d-md-flex justify-content-between text-center text-md-start small">
-                        <div>&copy; 2025 LADY SMITH. All Rights Reserved.</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#" class="ms-3">Terms of Use</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
+<div class="footer-bottom position-relative">
+    <div class="container d-md-flex justify-content-between text-center text-md-start small">
+      <div>&copy; 2025 LADY SMITH. All Rights Reserved.</div>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#" class="ms-3">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+   </div>
+  
+</footer>
     </div>
 
 

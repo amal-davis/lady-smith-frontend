@@ -236,26 +236,95 @@ p{
       font-size: 1rem;
     }
   }
-  .text-content-section {
-  color: #222;
-}
-
-.text-content-section .section-heading {
-  font-weight: 500;
-  font-size: 2rem;
-  
-}
-
-.text-content-section p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
+ 
 
 /* .text-content-section a {
   color: #004d40;
   text-decoration: underline;
 } */
+
+
+
+.hotel-header-section {
+  background-color: #fff;
+}
+
+.badge i {
+  font-size: 0.9rem;
+}
+/* Section padding */
+.gallery-rating-section {
+  background-color: #fff;
+}
+
+/* Make sure thumbnails and stacked images stay rounded and spaced well */
+.gallery-rating-section img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Fix image height for side images if needed */
+.gallery-rating-section .col-md-4 img {
+  
+  object-fit: cover;
+}
+
+/* Right panel cards */
+.gallery-rating-section .rating-card,
+.gallery-rating-section .map-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Text styling inside the right panel */
+.rating-card h6 {
+  font-size: 1.1rem;
+}
+
+.rating-card .badge {
+  font-size: 1rem;
+  padding: 0.35rem 0.65rem;
+}
+
+/* Reviewer initial circle */
+.rating-card .badge.bg-secondary {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.property-info-section p {
+  font-size: 0.95rem;
+}
+
+.property-info-section i {
+  width: 20px;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .gallery-rating-section .col-md-4 img {
+    height: auto;
+  }
+
+  .rating-card,
+  .map-card {
+    text-align: center;
+  }
+}
+.feature-box {
+  background-color: #fff;
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.feature-box:hover {
+  background-color: #f8f9fa;
+}
+
 
 .book-btn {
   background-color: #00C7A0;
@@ -273,60 +342,7 @@ p{
   background-color: #0c3221;
   color: #fff;
 }
-.video-banner-section {
-  background-image: url('footer-bg.jpg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-  position: relative;
-}
 
-.video-banner-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.subheading {
-  font-size: 0.85rem;
-  color: #00C7A0;
-  letter-spacing: 1px;
-}
-
-.play-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 2px solid #fff;
-  color: #fff;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.play-btn:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .video-banner-section {
-    height: 300px;
-  }
-  .play-btn {
-    width: 60px;
-    height: 60px;
-    font-size: 1.3rem;
-  }
-}
 .go-next-section {
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -568,5 +584,29 @@ p{
     left: -120px;
     opacity: 1;
     top: -85px;
+  }
+}
+.footer-logo-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-trust-logo {
+  max-height: 55px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-trust-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .footer-logo-trust {
+    flex-direction: column;
+    gap: 10px;
   }
 }

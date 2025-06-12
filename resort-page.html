@@ -16,6 +16,38 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
 
 </head>
+<style>
+  .icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #086D59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #086D59 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
+
+.icon-circle:hover {
+  background-color: #086D59;
+  color: white !important;
+  text-decoration: none;
+}
+.icon-circle a{
+  color: #086D59;
+}
+/* Optional: Adjust icon spacing on smaller screens */
+@media (max-width: 576px) {
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+</style>
 <body>
     
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -527,7 +559,11 @@
 <footer class="footer-section py-5 mt-5">
   <!-- Main Content Section -->
   <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
-    <div class="row">
+    <div class="footer-logo-trust text-center mb-4">
+    <img src="bookingccom.png" alt="Booking.com" class="footer-trust-logo me-3">
+    <img src="trip-advisory.png" alt="Tripadvisor" class="footer-trust-logo">
+  </div>
+    <div class="row mt-5">
       <!-- Logo & Contact -->
       <div class="col-md-4 mb-4">
         <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
@@ -560,11 +596,12 @@
       <!-- Social Media -->
       <div class="col-md-4 mb-4 text-md-end text-start">
         <h5>Follow Us</h5>
-        <div class="social-icons mt-3">
-          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="icon-circle" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-youtube"></i></a>
-        </div>
+       <div class="social-icons mt-3 d-flex">
+  <a href="#" class="icon-circle me-2"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle me-2"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fab fa-youtube"></i></a>
+</div>
+
       </div>
     </div>
   </div>
@@ -584,9 +621,9 @@
    <div class="container">
     <!-- Center image above footer-bottom -->
 <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
-  <img src="grass-flat.png" alt="Left Decor" class="footer-side-image">
-  <img src="grass-flat.png" alt="Center Decor" class="footer-center-image">
-  <img src="grass-flat.png" alt="Right Decor" class="footer-side-image">
+  <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
 </div>
 
 

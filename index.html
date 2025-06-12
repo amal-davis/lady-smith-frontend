@@ -18,7 +18,69 @@
 
 
 </head>
+<style>
+  .icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #086D59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #086D59 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
 
+.icon-circle:hover {
+  background-color: #086D59;
+  color: white !important;
+  text-decoration: none;
+}
+.icon-circle a{
+  color: #086D59;
+}
+/* Optional: Adjust icon spacing on smaller screens */
+@media (max-width: 576px) {
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+ .rounded-bl {
+    border-bottom-left-radius: 40px;
+  }
+
+  .rounded-tr {
+    border-top-right-radius: 40px;
+  }
+
+  /* Optional for smooth card appearance */
+  .custom-card-body {
+    background-color: #fff;
+  }
+  .rounded-card {
+  border-top-right-radius: 40px;
+  overflow: hidden; /* Ensures image follows card's radius */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Add soft shadow */
+  border: none; /* Remove the default border */
+}
+.btn-warnings {
+  background-color: #17BF9E;
+  color: #fff;
+  transition: all 0.3s ease; /* smooth transition */
+}
+
+.btn-warnings:hover {
+  background-color: #119b80; /* darker shade for hover */
+  color: #fff;               /* keep text white */
+  box-shadow: 0 4px 12px rgba(23, 191, 158, 0.4); /* optional glow */
+}
+
+
+</style>
 <body>
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
@@ -48,7 +110,9 @@
           <li class="nav-item"><a class="nav-link" href="#">PACKAGES</a></li>
           <li class="nav-item"><a class="nav-link" href="#">ROOMS</a></li>
           <li class="nav-item"><a class="nav-link" href="#">BLOGS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
           <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+          
         </ul>
       </div>
 
@@ -216,90 +280,87 @@
       <!-- Image and Content Section -->
       <div class="row align-items-center  gx-5 mt-3">
         <!-- Image -->
-        <div class="col-lg-6">
-          <img src="room1.png" alt="Retreat Image" class="img-fluid rome-image">
+<div class="col-md-4 col-sm-6 mb-4">
+  <div class="card rounded-card overflow-hidden h-100">
+    <!-- Image -->
+    <img src="room1.png" class="card-img-top rounded-bl" alt="Property Image" style="height: 200px; object-fit: cover;">
+
+    <!-- Card Body -->
+    <div class="card-body custom-card-body rounded-tr text-center">
+      <h5 class="card-title fw-semibold">Professional Immobilie Preise</h5>
+      <p class="card-text text-muted small mb-3">Lorem ipsum dolor sit amet consectetur</p>
+
+      <div class="row justify-content-center text-center mb-2 mt-3">
+        <div class="col-6">
+          <small class="text-muted d-block">Wohnung</small>
+          <strong class="text-dark">CHF 280.00</strong>
         </div>
-  
-        <!-- Text Content -->
-        <div class="col-lg-6  pt-3">
-          <h3 class="fw-500 woodland">Woodland Cottages</h3>
-          <p class="" style="color: #000000;">
-            Forest Haven Retreat was built with a love for the woods and a passion for sustainable living. Located in a
-            protected forest reserve, we provide cozy, Forest Haven Retreat was built with a love for the woods and a
-            passion for sustainable living. Located in a protected forest reserve, we provide cozy,
-          </p>
-  
-          <!-- Location -->
-          <div class="mb-3 mt-5" style="font-size: 18px;">
-            <i class="fas fa-map-marker-alt  me-2" style="color: #086D59;font-size: 18px;"></i>
-            1134 Ecfhgdhjj fgjhgdj Cv
-          </div>
-  
-          <!-- Icon Rows -->
-          <div class="row text-muted mb-3">
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-ruler-combined  me-2" style="color: #086D59;font-size: 18px;"></i> 2345 sqft
-            </div>
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-dollar-sign  me-2" style="color: #086D59;font-size: 18px;"></i> $120/night
-            </div>
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-bed  me-2" style="color: #086D59;font-size: 18px;"></i> 2 Bed
-            </div>
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-check-circle  me-2" style="color: #086D59;font-size: 18px;"></i> Available
-            </div>
-          </div>
-  
-          <!-- CTA Button -->
-          <button class="btn btn-success rounded-circle" style="font-weight: 300;background-color: #086D59;">
-            <i class="ri-arrow-right-up-line" style="font-weight: 300;"></i>
-          </button>
+        <div class="col-6">
+          <small class="text-muted d-block">Haus</small>
+          <strong class="text-dark">CHF 380.00</strong>
         </div>
       </div>
-      <div class="row align-items-center g-4 gx-5 mt-3">
-        <!-- Image -->
-        <div class="col-lg-6">
-          <img src="room2.png" alt="Retreat Image" class="img-fluid rome-image">
+
+      <!-- Button -->
+      <a href="#" class="btn btn-warnings w-100 rounded-pill mt-3">Termin Vereinbaren</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4">
+  <div class="card rounded-card overflow-hidden h-100">
+    <!-- Image -->
+    <img src="room2.png" class="card-img-top rounded-bl" alt="Property Image" style="height: 200px; object-fit: cover;">
+
+    <!-- Card Body -->
+    <div class="card-body custom-card-body rounded-tr text-center">
+      <h5 class="card-title fw-semibold">Professional Immobilie Preise</h5>
+      <p class="card-text text-muted small mb-3">Lorem ipsum dolor sit amet consectetur</p>
+
+      <div class="row justify-content-center text-center mb-2 mt-3">
+        <div class="col-6">
+          <small class="text-muted d-block">Wohnung</small>
+          <strong class="text-dark">CHF 280.00</strong>
         </div>
-  
-        <!-- Text Content -->
-        <div class="col-lg-6 pt-3">
-          <h3 class="fw-500 woodland">Forest View Rooms</h3>
-          <p class="" style="color: #000000;">
-            Forest Haven Retreat was built with a love for the woods and a passion for sustainable living. Located in a
-            protected forest reserve, we provide cozy, Forest Haven Retreat was built with a love for the woods and a
-            passion for sustainable living. Located in a protected forest reserve, we provide cozy,
-          </p>
-  
-          <!-- Location -->
-          <div class="mb-3 mt-5" style="font-size: 18px;">
-            <i class="fas fa-map-marker-alt  me-2" style="color: #086D59;font-size: 18px;"></i>
-            1134 Ecfhgdhjj fgjhgdj Cv
-          </div>
-  
-          <!-- Icon Rows -->
-          <div class="row text-muted ">
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-ruler-combined  me-2" style="color: #086D59;font-size: 18px;"></i> 2345 sqft
-            </div>
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-dollar-sign  me-2" style="color: #086D59;font-size: 18px;"></i> $120/night
-            </div>
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-bed  me-2" style="color: #086D59;font-size: 18px;"></i> 2 Bed
-            </div>
-            <div class="col-6 mb-3" style="font-size: 18px;">
-              <i class="fas fa-check-circle  me-2" style="color: #086D59;font-size: 18px;"></i> Available
-            </div>
-          </div>
-  
-          <!-- CTA Button -->
-          <button class="btn btn-success rounded-circle" style="font-weight: 300;background-color: #086D59;">
-            <i class="ri-arrow-right-up-line"></i>
-          </button>
+        <div class="col-6">
+          <small class="text-muted d-block">Haus</small>
+          <strong class="text-dark">CHF 380.00</strong>
         </div>
       </div>
+
+      <!-- Button -->
+      <a href="#" class="btn btn-warnings w-100 rounded-pill mt-3">Termin Vereinbaren</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4">
+  <div class="card  rounded-card overflow-hidden h-100">
+    <!-- Image -->
+    <img src="nature-image.png" class="card-img-top rounded-bl" alt="Property Image" style="height: 200px; object-fit: cover; border-bottom-left-radius: 50px;">
+
+    <!-- Card Body -->
+    <div class="card-body custom-card-body rounded-tr text-center">
+      <h5 class="card-title fw-semibold">Professional Immobilie Preise</h5>
+      <p class="card-text text-muted small mb-3">Lorem ipsum dolor sit amet consectetur</p>
+
+      <div class="row justify-content-center text-center mb-2 mt-3">
+        <div class="col-6">
+          <small class="text-muted d-block">Wohnung</small>
+          <strong class="text-dark">CHF 280.00</strong>
+        </div>
+        <div class="col-6">
+          <small class="text-muted d-block">Haus</small>
+          <strong class="text-dark">CHF 380.00</strong>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <a href="#" class="btn btn-warnings w-100 rounded-pill mt-3">Termin Vereinbaren</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+
     </div>
   
   
@@ -664,59 +725,24 @@
   </div>
 </section>    
 
-<section class="gallery-section py-5">
-  <div class="container">
-    <h3 class="text-center mb-4">View Our Gallery</h3>
-    <div class="row g-4">
-      <!-- First Row -->
-      <div class="col-md-4 col-sm-6">
-        <a data-fancybox="gallery" href="nature-image.png">
-          <img src="nature-image.png" alt="Gallery 1" class="img-fluid rounded shadow-sm">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a data-fancybox="gallery" href="room1.png">
-          <img src="room1.png" alt="Gallery 2" class="img-fluid rounded shadow-sm">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a data-fancybox="gallery" href="room2.png">
-          <img src="room2.png" alt="Gallery 3" class="img-fluid rounded shadow-sm">
-        </a>
-      </div>
 
-      <!-- Second Row -->
-      <div class="col-md-4 col-sm-6">
-        <a data-fancybox="gallery" href="blog1.png">
-          <img src="blog1.png" alt="Gallery 4" class="img-fluid rounded shadow-sm">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a data-fancybox="gallery" href="blog2.png">
-          <img src="blog2.png" alt="Gallery 5" class="img-fluid rounded shadow-sm">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a data-fancybox="gallery" href="blog3.png">
-          <img src="blog3.png" alt="Gallery 6" class="img-fluid rounded shadow-sm">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 <footer class="footer-section py-5 mt-5">
   <!-- Main Content Section -->
   <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
-    <div class="row">
+    <div class="footer-logo-trust text-center mb-4">
+    <img src="bookingccom.png" alt="Booking.com" class="footer-trust-logo me-3">
+    <img src="trip-advisory.png" alt="Tripadvisor" class="footer-trust-logo">
+  </div>
+    <div class="row mt-5">
       <!-- Logo & Contact -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
         <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
         <a href="mailto:help@vistours.com">help@vistours.com</a>
       </div>
 
       <!-- Support Links 1 -->
-      <div class="col-md-2 mb-4">
+      <div class="col-md-3 mb-4">
         <h5 class="mb-3">Support</h5>
         <ul class="list-unstyled">
           <li class="mb-3"><a href="#">Get in Touch</a></li>
@@ -727,7 +753,7 @@
       </div>
 
       <!-- Support Links 2 -->
-      <div class="col-md-2 mb-4">
+      <div class="col-md-3 mb-4">
         <h5 class="mb-3">Support</h5>
         <ul class="list-unstyled">
           <li class="mb-3"><a href="#">Get in Touch</a></li>
@@ -738,13 +764,14 @@
       </div>
 
       <!-- Social Media -->
-      <div class="col-md-4 mb-4 text-md-end text-start">
+      <div class="col-md-3 mb-4  text-start">
         <h5>Follow Us</h5>
-        <div class="social-icons mt-3">
-          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="icon-circle" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-youtube"></i></a>
-        </div>
+       <div class="social-icons mt-3 d-flex">
+  <a href="#" class="icon-circle me-2"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle me-2"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fab fa-youtube"></i></a>
+</div>
+
       </div>
     </div>
   </div>
@@ -764,9 +791,12 @@
    <div class="container">
     <!-- Center image above footer-bottom -->
 <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
-  <img src="grass-flat.png" alt="Left Decor" class="footer-side-image">
-  <img src="grass-flat.png" alt="Center Decor" class="footer-center-image">
-  <img src="grass-flat.png" alt="Right Decor" class="footer-side-image">
+  <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
 </div>
 
 

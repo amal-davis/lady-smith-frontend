@@ -535,3 +535,28 @@ p{
     top: -85px;
   }
 }
+.footer-logo-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-trust-logo {
+  max-height: 55px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-trust-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .footer-logo-trust {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

@@ -10,13 +10,44 @@
   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
       <!-- Fancybox CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
 </head>
+<style>
+  .icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #086D59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #086D59 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
+
+.icon-circle:hover {
+  background-color: #086D59;
+  color: white !important;
+  text-decoration: none;
+}
+.icon-circle a{
+  color: #086D59;
+}
+/* Optional: Adjust icon spacing on smaller screens */
+@media (max-width: 576px) {
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+</style>
 <body>
     
 
@@ -41,7 +72,7 @@
           <!-- Nav Links -->
           <div class="collapse navbar-collapse" id="navbarNav">
            <ul class="navbar-nav d-flex align-items-lg-center ms-auto me-lg-3 gap-lg-4">
-          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
           <li class="nav-item"><a class="nav-link" href="#">PROPERTIES</a></li>
           <li class="nav-item"><a class="nav-link" href="#">PACKAGES</a></li>
@@ -61,127 +92,299 @@
 
 
 <div id="scroll-container">
-<section class="banner mb-5">
+    <section class="banner mb-5">
     <div class="banner-content">
-    <h1>Room Detail Page</h1>
+    <h1>Room-Page</h1>
 </div>
 </section>
-<section class="image-gallery-section py-5">
+
+<section class="hotel-header-section py-4 px-3" style="margin-top: 10px;">
+  <div class="container">
+    <div class="row justify-content-between align-items-start">
+      
+      <!-- Left Column -->
+      <div class="col-md-9">
+        <!-- Top Row: Stars and Badges -->
+        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+          <!-- Star Rating -->
+          <div class="text-warning">
+            ★★★★☆
+          </div>
+          <!-- Badges -->
+          <span class="badge bg-light border text-dark"><i class="fas fa-umbrella-beach me-1"></i> Beachfront</span>
+          <span class="badge bg-light border text-dark"><i class="fas fa-shuttle-van me-1"></i> Airport shuttle</span>
+          <span class="badge bg-light border text-dark"><i class="fas fa-leaf me-1"></i> Sustainability certification</span>
+        </div>
+
+        <!-- Heading -->
+        <h4 class="fw-bold mb-2">OBLU XPERIENCE Ailafushi – All Inclusive with Free Transfers</h4>
+
+        <!-- Location -->
+        <p class="text-muted mb-0">
+          <i class="fas fa-map-marker-alt  me-1" style="color: #00C7A0;"></i>
+          Ailafushi Island Male' Atoll, OBLU XPERIENCE Ailafushi, 20002 Male City, Maldives –
+          <span class=" fw-semibold" style="color: #00C7A0;">Excellent location</span> –
+          <a href="#" class="text-primary text-decoration-underline">show map</a>
+        </p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-3 d-flex justify-content-md-end justify-content-start align-items-center gap-3 mt-3 mt-md-0">
+        <i class="fas fa-share-alt fs-5" style="color: #00C7A0;"></i>
+        <a href="#" class="btn  px-4 fw-semibold" style="background-color: #00C7A0; color: #fff;">Reserve</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="gallery-rating-section py-5 px-3 mt-3">
   <div class="container">
     <div class="row g-4">
-      
-      <!-- Image 1 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="room1.png" data-fancybox="gallery">
-          <img src="room1.png" alt="Gallery Image" class="img-fluid rounded w-100">
-        </a>
+
+      <!-- Gallery Section (Left) -->
+      <div class="col-lg-9">
+        <div class="row g-2">
+          <!-- Left Main Image -->
+          <div class="col-md-8">
+            <a href="nature-image.png" data-fancybox="gallery">
+              <img src="nature-image.png" class="img-fluid w-100 rounded" alt="Main">
+            </a>
+          </div>
+
+          <!-- Right Stack (2 top images) -->
+          <div class="col-md-4 d-flex flex-column gap-2">
+            <a href="room1.png" data-fancybox="gallery">
+              <img src="room1.png" class="img-fluid rounded" alt="Room">
+            </a>
+            <a href="room2.png" data-fancybox="gallery">
+              <img src="room2.png" class="img-fluid rounded" alt="Bathroom">
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Thumbnails -->
+        <div class="row g-2 mt-2">
+          <div class="col-6 col-sm-4 col-lg-2">
+            <a href="room1.png" data-fancybox="gallery"><img src="room1.png" class="img-fluid rounded w-100"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <a href="room2.png" data-fancybox="gallery"><img src="room2.png" class="img-fluid rounded w-100"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <a href="nature-image.png" data-fancybox="gallery"><img src="nature-image.png" class="img-fluid rounded w-100"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <a href="blog3.png" data-fancybox="gallery"><img src="blog3.png" class="img-fluid rounded w-100"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <a href="room1.png" data-fancybox="gallery"><img src="room1.png" class="img-fluid rounded w-100"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <a href="room2.png" data-fancybox="gallery"><img src="room2.png" class="img-fluid rounded w-100"></a>
+          </div>
+        </div>
       </div>
 
-      <!-- Image 2 -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="room2.png" data-fancybox="gallery">
-          <img src="room2.png" alt="Gallery Image" class="img-fluid rounded w-100">
-        </a>
+      <!-- Right Side: Rating & Map -->
+      <div class="col-lg-3">
+        <!-- Rating Box -->
+        <div class="rating-carousel owl-carousel owl-theme">
+  
+  <!-- Slide 1 -->
+  <div class="item">
+    <div class="rating-card bg-white border rounded p-3">
+      <h6 class="mb-1">Superb <span class="badge ms-2" style="background-color: #086D59;">9.0</span></h6>
+      <small class="text-muted">1,615 reviews</small>
+      <hr>
+      <p class="fst-italic small mb-2">“Our stay at OBLU Xperience in the Maldives was truly nothing short of spectacular...”</p>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-secondary">M</span>
+        <small>Margaret</small>
       </div>
-
-      <!-- Continue same pattern for other images -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="room1.png" data-fancybox="gallery">
-          <img src="room1.png" alt="Gallery Image" class="img-fluid rounded w-100">
-        </a>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="room2.png" data-fancybox="gallery">
-          <img src="room2.png" alt="Gallery Image" class="img-fluid rounded w-100">
-        </a>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="room1.png" data-fancybox="gallery">
-          <img src="room1.png" alt="Gallery Image" class="img-fluid rounded w-100">
-        </a>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <a href="room2.png" data-fancybox="gallery">
-          <img src="room2.png" alt="Gallery Image" class="img-fluid rounded w-100">
-        </a>
-      </div>
-      
+      <hr>
+      <strong>Staff</strong>
+      <span class="float-end border px-2 py-1 rounded">9.4</span>
     </div>
   </div>
-</section>
 
-<section class="text-content-section py-5">
-  <div class="container">
-    <h2 class="section-heading mb-4" style=" font-family: 'Volkhov', serif;">Honeymoon Cottage with Private Pool</h2>
-
-    <p>Experience the epitome of luxury and romance with a honeymoon in a private pool room at Kuruva, a breathtaking destination nestled amidst nature's splendour...</p>
-
-    <p>Your private pool room at Kuruva is a haven of opulence, designed to offer seclusion and intimacy for newlyweds seeking an unforgettable escape...</p>
-
-    <p>The highlight of our private pool room is, undoubtedly, the enchanting pool that awaits you. The pool offers you complete privacy...</p>
-
-    <p>To enhance your stay, the room is equipped with modern amenities that cater to your every need. A plush king-sized bed invites you to indulge in blissful slumber...</p>
-
-    <p>In addition to the privacy and comfort of your room, Kuruva offers a range of activities and experiences to enhance your honeymoon...</p>
-
-    <p>A >honeymoon resort in Wayanad with a private pool is exclusive at Kuruva...</p>
-
-    <!-- Button -->
-    <div class="text-center mt-5">
-      <a href="#" class="book-btn">BOOK NOW</a>
+  <!-- Slide 2 (Example) -->
+  <div class="item">
+    <div class="rating-card bg-white border rounded p-3">
+      <h6 class="mb-1">Fantastic <span class="badge ms-2" style="background-color: #086D59;">9.2</span></h6>
+      <small class="text-muted">2,340 reviews</small>
+      <hr>
+      <p class="fst-italic small mb-2">“Great location and staff, clean rooms, wonderful views!”</p>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-secondary">J</span>
+        <small>John</small>
+      </div>
+      <hr>
+      <strong>Service</strong>
+      <span class="float-end border px-2 py-1 rounded">9.5</span>
     </div>
   </div>
-</section>
 
-
-<section class="video-banner-section text-center text-white">
-  <div class="video-banner-overlay">
-    <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
-      <p class="subheading text-uppercase mb-2">Twin Bedroom Suite with Tub</p>
-      <h2 class="display-5 fw-semibold mb-4">Watch Our Video</h2>
-      <a href="your-video-link.mp4" class="play-btn" data-fancybox>
-        <i class="fas fa-play"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-  <div class="container mt-5 position-relative go-next-wrapper">
-  <!-- Decorative Leaf Image -->
-  <img src="tree4.png" alt="Leaf" class="leaf-decor">
-
-  <div class="row align-items-center go-next-section">
-    <!-- Text Section -->
-    <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
-      <h3 class="fw-bold mb-4">WHERE WILL YOU GO NEXT?</h3>
-      <p class="mb-4">You are spoiled of choice with our unique destinations,<br>our hotel and resorts</p>
-      <a href="#" class="go-next-btn">Book Now</a>
-    </div>
-
-    <!-- Image Section -->
-    <div class="col-md-6 position-relative z-2">
-      <img src="blog3.png" alt="Pool" class="go-next-img">
-    </div>
-  </div>
 </div>
+
+
+        <!-- Map Box -->
+        <div class="map-card bg-light p-3 rounded text-center">
+          <div class="mb-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Location_dot_blue.svg" width="20" alt="">
+            <strong class="d-block">OBLU XPERIENCE Ailafushi</strong>
+          </div>
+          <a href="https://maps.google.com" target="_blank" class="btn  btn-sm mt-2" style="background-color: #00C7A0; color: #fff;">Show on map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="feature-icon-section py-4 px-3">
+  <div class="container">
+    <div class="row g-3">
+
+      <!-- Item 1 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="feature-box d-flex align-items-center p-3 border rounded">
+          <i class="fas fa-coffee me-2 fs-5"></i>
+          <span>Very good breakfast</span>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="feature-box d-flex align-items-center p-3 border rounded">
+          <i class="fas fa-swimmer me-2 fs-5"></i>
+          <span>Outdoor swimming pool</span>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="feature-box d-flex align-items-center p-3 border rounded">
+          <i class="fas fa-utensils me-2 fs-5"></i>
+          <span>3 restaurants</span>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="feature-box d-flex align-items-center p-3 border rounded">
+          <i class="fas fa-bath me-2 fs-5"></i>
+          <span>Private bathroom</span>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="feature-box d-flex align-items-center p-3 border rounded">
+          <i class="fas fa-water me-2 fs-5"></i>
+          <span>Sea view</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="property-info-section py-5 px-3 mt-4">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Left Column -->
+      <div class="col-lg-8">
+        <!-- About Text Section -->
+        <h5 class="mb-3 fw-bold">About this property</h5>
+        <p><strong>Beachfront and Leisure:</strong> OBLU XPERIENCE Ailafushi in Male offers a beachfront setting with an infinity swimming pool, spa facilities, sauna, fitness centre, sun terrace, and free WiFi.</p>
+        <p><strong>Comfortable Accommodations:</strong> Rooms feature private bathrooms, bathrobes, tea and coffee makers, and more.</p>
+        <p><strong>Dining Experience:</strong> The modern, family-friendly restaurant serves seafood, local, and international cuisines with halal, vegetarian, and gluten-free options.</p>
+        <p><strong>Exceptional Service:</strong> Highly rated for attentive staff and excellent support, including concierge, 24-hour desk, and more.</p>
+        <p class="text-muted small">Distance in property description is calculated using © OpenStreetMap</p>
+
+        <!-- Facilities Icon Grid -->
+        <h6 class="mt-4 fw-bold">Most popular facilities</h6>
+        <div class="row g-3 mt-2">
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-swimmer me-2 text-success"></i> Outdoor swimming pool
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-shuttle-van me-2 text-success"></i> Airport shuttle (free)
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-umbrella-beach me-2 text-success"></i> Beachfront
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-wifi me-2 text-success"></i> Free WiFi
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-users me-2 text-success"></i> Family rooms
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-spa me-2 text-success"></i> Spa and wellness centre
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-utensils me-2 text-success"></i> 3 restaurants
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-coffee me-2 text-success"></i> Tea/coffee in all rooms
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-glass-martini-alt me-2 text-success"></i> Bar
+          </div>
+          <div class="col-6 col-md-4 d-flex align-items-center">
+            <i class="fas fa-mug-hot me-2 text-success"></i> Very good breakfast
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-4">
+        <!-- Top Card -->
+        <div class="bg-white border rounded p-3 mb-3">
+          <div class="small text-muted mb-1">Hotel chain/brand</div>
+          <div class="fw-bold mb-3">Atmosphere Hotels & Resorts</div>
+          <h6 class="fw-bold">Property highlights</h6>
+          <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-1"></i> Top location: Highly rated by recent guests (9.4)</p>
+          <h6 class="fw-bold">Breakfast info</h6>
+          <p>Vegetarian, Halal, Gluten-free, American, Buffet</p>
+          <h6 class="fw-bold">Activities:</h6>
+          <ul class="list-unstyled mb-0">
+            <li>Fitness centre</li>
+            <li>Fishing</li>
+            <li>Spa and wellness centre</li>
+          </ul>
+        </div>
+
+        <!-- Bottom Card -->
+        <div class="bg-light p-3 rounded text-center">
+          <a href="#" class="btn  w-100 fw-semibold" style="background-color: #00C7A0; color: #fff;">Reserve</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <footer class="footer-section py-5 mt-5">
   <!-- Main Content Section -->
   <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
-    <div class="row">
+    <div class="footer-logo-trust text-center mb-4">
+    <img src="bookingccom.png" alt="Booking.com" class="footer-trust-logo me-3">
+    <img src="trip-advisory.png" alt="Tripadvisor" class="footer-trust-logo">
+  </div>
+    <div class="row mt-5">
       <!-- Logo & Contact -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-3 mb-4">
         <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
         <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
         <a href="mailto:help@vistours.com">help@vistours.com</a>
       </div>
 
       <!-- Support Links 1 -->
-      <div class="col-md-2 mb-4">
+      <div class="col-md-3 mb-4">
         <h5 class="mb-3">Support</h5>
         <ul class="list-unstyled">
           <li class="mb-3"><a href="#">Get in Touch</a></li>
@@ -192,7 +395,7 @@
       </div>
 
       <!-- Support Links 2 -->
-      <div class="col-md-2 mb-4">
+      <div class="col-md-3 mb-4">
         <h5 class="mb-3">Support</h5>
         <ul class="list-unstyled">
           <li class="mb-3"><a href="#">Get in Touch</a></li>
@@ -203,13 +406,14 @@
       </div>
 
       <!-- Social Media -->
-      <div class="col-md-4 mb-4 text-md-end text-start">
+      <div class="col-md-3 mb-4  text-start">
         <h5>Follow Us</h5>
-        <div class="social-icons mt-3">
-          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="icon-circle me-2" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="icon-circle" style="font-size: 18px; color: #086D59 !important;"><i class="fab fa-youtube"></i></a>
-        </div>
+       <div class="social-icons mt-3 d-flex">
+  <a href="#" class="icon-circle me-2"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" class="icon-circle me-2"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="icon-circle"><i class="fab fa-youtube"></i></a>
+</div>
+
       </div>
     </div>
   </div>
@@ -229,9 +433,12 @@
    <div class="container">
     <!-- Center image above footer-bottom -->
 <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
-  <img src="grass-flat.png" alt="Left Decor" class="footer-side-image">
-  <img src="grass-flat.png" alt="Center Decor" class="footer-center-image">
-  <img src="grass-flat.png" alt="Right Decor" class="footer-side-image">
+  <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
 </div>
 
 
@@ -258,13 +465,14 @@
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
   <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Owl Carousel JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
   <!-- jQuery (optional but useful) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- Fancybox JS -->
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
@@ -332,6 +540,21 @@ toggleBtn.addEventListener('click', () => {
     updateNavbarState(scrollbar.offset.y);
   }, 200);
 });
+$(document).ready(function () {
+  $(".rating-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 5000,         // Wait 5 seconds between slides
+    smartSpeed: 1000,              // Smooth transition duration (1s)
+    autoplayHoverPause: true
+  });
+});
+
+
   </script>
 </body>
 </html>
