@@ -880,13 +880,13 @@ p{
   ;
 }
 .leaf-decors {
-  position: absolute;
-  left: -90px;
-  bottom: -30px;
-  width: 250px; /* Adjust size as needed */
-  z-index: 0;
-  opacity: 0.4;
-  pointer-events: none;
+    position: absolute;
+    left: -90px;
+    bottom: -100px;
+    width: 250px;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
 }
 @media (max-width: 768px) {
   .leaf-decors {

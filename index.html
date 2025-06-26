@@ -78,6 +78,29 @@
   color: #fff;               /* keep text white */
   box-shadow: 0 4px 12px rgba(23, 191, 158, 0.4); /* optional glow */
 }
+.property-card {
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.rating-badge {
+  background-color: #17BF9E;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
 
 
 </style>
@@ -264,7 +287,7 @@
         </div>
       </div>
     </section>
-    <div class="container mt-5"  style="padding: 30px;">
+    <div class="container"  style="padding: 30px;margin-top: 120px;">
       <!-- Header -->
       <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
         <div>
@@ -277,89 +300,83 @@
         </div>
       </div>
   
-      <!-- Image and Content Section -->
-      <div class="row align-items-center  gx-5 mt-3">
-        <!-- Image -->
-<div class="col-md-4 col-sm-6 mb-4">
-  <div class="card rounded-card overflow-hidden h-100">
-    <!-- Image -->
-    <img src="room1.png" class="card-img-top rounded-bl" alt="Property Image" style="height: 200px; object-fit: cover;">
+<div class="container py-5">
+  <div class="row g-4">
 
-    <!-- Card Body -->
-    <div class="card-body custom-card-body rounded-tr text-center">
-      <h5 class="card-title fw-semibold">Professional Immobilie Preise</h5>
-      <p class="card-text text-muted small mb-3">Lorem ipsum dolor sit amet consectetur</p>
+    <!-- Card Start -->
+    <div class="col-md-4 col-sm-6">
+      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
+        <img src="room1.png" class="img-fluid" alt="Property Image">
 
-      <div class="row justify-content-center text-center mb-2 mt-3">
-        <div class="col-6">
-          <small class="text-muted d-block">Wohnung</small>
-          <strong class="text-dark">CHF 280.00</strong>
-        </div>
-        <div class="col-6">
-          <small class="text-muted d-block">Haus</small>
-          <strong class="text-dark">CHF 380.00</strong>
-        </div>
-      </div>
+        <div class="py-5 p-3">
+          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+          <p class="text-muted mb-2">
+            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+          </p>
 
-      <!-- Button -->
-      <a href="#" class="btn btn-warnings w-100 rounded-pill mt-3">Termin Vereinbaren</a>
-    </div>
-  </div>
-</div>
-<div class="col-md-4 col-sm-6 mb-4">
-  <div class="card rounded-card overflow-hidden h-100">
-    <!-- Image -->
-    <img src="room2.png" class="card-img-top rounded-bl" alt="Property Image" style="height: 200px; object-fit: cover;">
-
-    <!-- Card Body -->
-    <div class="card-body custom-card-body rounded-tr text-center">
-      <h5 class="card-title fw-semibold">Professional Immobilie Preise</h5>
-      <p class="card-text text-muted small mb-3">Lorem ipsum dolor sit amet consectetur</p>
-
-      <div class="row justify-content-center text-center mb-2 mt-3">
-        <div class="col-6">
-          <small class="text-muted d-block">Wohnung</small>
-          <strong class="text-dark">CHF 280.00</strong>
-        </div>
-        <div class="col-6">
-          <small class="text-muted d-block">Haus</small>
-          <strong class="text-dark">CHF 380.00</strong>
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="fw-semibold fs-6 text-dark">$1200</span>
+              <small class="text-muted">/ night</small>
+            </div>
+            <div class="rating-badge">
+              <i class="fas fa-star text-warning me-1"></i>4.5
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Button -->
-      <a href="#" class="btn btn-warnings w-100 rounded-pill mt-3">Termin Vereinbaren</a>
     </div>
-  </div>
-</div>
-<div class="col-md-4 col-sm-6 mb-4">
-  <div class="card  rounded-card overflow-hidden h-100">
-    <!-- Image -->
-    <img src="nature-image.png" class="card-img-top rounded-bl" alt="Property Image" style="height: 200px; object-fit: cover; border-bottom-left-radius: 50px;">
+    <div class="col-md-4 col-sm-6">
+      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
+        <img src="room2.png" class="img-fluid" alt="Property Image">
 
-    <!-- Card Body -->
-    <div class="card-body custom-card-body rounded-tr text-center">
-      <h5 class="card-title fw-semibold">Professional Immobilie Preise</h5>
-      <p class="card-text text-muted small mb-3">Lorem ipsum dolor sit amet consectetur</p>
+        <div class="py-5 p-3">
+          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+          <p class="text-muted mb-2">
+            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+          </p>
 
-      <div class="row justify-content-center text-center mb-2 mt-3">
-        <div class="col-6">
-          <small class="text-muted d-block">Wohnung</small>
-          <strong class="text-dark">CHF 280.00</strong>
-        </div>
-        <div class="col-6">
-          <small class="text-muted d-block">Haus</small>
-          <strong class="text-dark">CHF 380.00</strong>
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="fw-semibold fs-6 text-dark">$1200</span>
+              <small class="text-muted">/ night</small>
+            </div>
+            <div class="rating-badge">
+              <i class="fas fa-star text-warning me-1"></i>4.5
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Button -->
-      <a href="#" class="btn btn-warnings w-100 rounded-pill mt-3">Termin Vereinbaren</a>
     </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
+        <img src="blog3.png" class="img-fluid" alt="Property Image">
+
+        <div class="py-5 p-3">
+          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+          <p class="text-muted mb-2">
+            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+          </p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="fw-semibold fs-6 text-dark">$1200</span>
+              <small class="text-muted">/ night</small>
+            </div>
+            <div class="rating-badge">
+              <i class="fas fa-star text-warning me-1"></i>4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card End -->
+
+    <!-- Repeat the above .col-md-4 block two more times for other cards -->
+
   </div>
 </div>
 
-      </div>
 
     </div>
   
@@ -454,7 +471,7 @@
     
           <!-- Center Image -->
           <div class="col-md-6 mb-4 mb-md-0">
-            <img src="main-image.png" class="img-fluid  adventure-main-img" alt="Adventure Image">
+            <img src="blog1.png" class="img-fluid  adventure-main-img" alt="Adventure Image">
           </div>
     
           <!-- Right Icons -->
@@ -498,7 +515,7 @@
               <div class="blog-img-wrapper">
                 <img src="blog1.png" alt="Blog Image" class="blog-img">
                 <span class="blog-badge">Nature & Wildlife</span>
-                <span class="blog-arrow"><i class="fas fa-arrow-up-right"></i></span>
+                <span class="blog-arrow"><i class="ri-arrow-right-up-line"></i></span>
               </div>
               <div class="blog-content">
                 <div class="blog-title">Nature’s Notebook: Tales from the Trees</div>
@@ -513,7 +530,7 @@
               <div class="blog-img-wrapper">
                 <img src="blog2.png" alt="Blog Image" class="blog-img">
                 <span class="blog-badge">Adventure</span>
-                <span class="blog-arrow"><i class="fas fa-arrow-up-right"></i></span>
+                <span class="blog-arrow"><i class="ri-arrow-right-up-line"></i></span>
               </div>
               <div class="blog-content">
                 <div class="blog-title">Rooted in Nature: Experiences That Ground You</div>
@@ -528,7 +545,7 @@
               <div class="blog-img-wrapper">
                 <img src="blog3.png" alt="Blog Image" class="blog-img">
                 <span class="blog-badge">Adventure</span>
-                <span class="blog-arrow"><i class="fas fa-arrow-up-right"></i></span>
+                <span class="blog-arrow"><i class="ri-arrow-right-up-line"></i></span>
               </div>
               <div class="blog-content">
                 <div class="blog-title">Eco Moments: Sustainability & Soul in the Wilderness</div>
@@ -778,21 +795,22 @@
 
   <!-- Leaf image between content & bottom -->
   <!-- Leaf image between content & bottom -->
-<div class="footer-leaf-wrapper text-center my-5">
-  <!-- Left image -->
+<!-- <div class="footer-leaf-wrapper text-center my-5">
   <img src="tree7.png" alt="Left Leaf Decor" class="footer-leaf footer-leaf-left">
 
-  <!-- Right image -->
   <img src="tree8.png" alt="Right Leaf Decor" class="footer-leaf footer-leaf-right">
-</div>
+</div> -->
 
 
   <!-- Bottom Section -->
-   <div class="container">
+   <div class="container mt-5">
     <!-- Center image above footer-bottom -->
 <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
   <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">

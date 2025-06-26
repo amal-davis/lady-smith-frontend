@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
       <!-- Fancybox CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
 </head>
 <style>
@@ -47,49 +49,135 @@
     font-size: 16px;
   }
 }
+
+/* Overlap using the wrapper */
+.booking-wrapper {
+  position: relative;
+  margin-top: -80px; /* How much it overlaps the banner */
+  z-index: 3;
+}
+
+/* Only target the booking-box itself */
+.booking-box {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+/* Mobile responsiveness fix */
+@media (max-width: 768px) {
+  .booking-wrapper {
+    margin-top: 20px; /* Disable overlap on small screens */
+  }
+
+  .booking-box .btn-group,
+  .booking-box .gap-2 {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .booking-box .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .booking-box .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+  .custom-btn {
+    background-color: #086D59  !important;
+    color: white !important;
+    border-radius: 25px !important;
+    padding: 8px 20px !important;
+  }
+
+  .custom-btn:hover {
+    background-color: #086D59 !important;
+  }
+
+  .custom-outline-btn {
+    border: 1px solid #086D59 !important;
+    color: #00824b !important;
+    background-color: transparent !important;
+    border-radius: 25px !important;
+    padding: 8px 20px !important;
+  }
+
+  .custom-outline-btn:hover {
+    background-color: #086D59  !important;
+    color: white !important;
+  }
+  .property-card {
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.rating-badge {
+  background-color: #17BF9E;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 </style>
 <body>
     
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-        <div class="container">
-    
-          <!-- Brand + Mobile Toggle + Mobile Book Now Button -->
-          <div class="d-flex justify-content-between align-items-center w-100">
-            <a class="navbar-brand text-white" href="#">
-              LADY SMITH
-              <span class="fw-light">RESORT</span>
-            </a>
-    
-            <div class="d-flex align-items-center">
-              <a href="#" class="btn btn-book d-lg-none me-2">BOOK NOW</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </div>
-    
-          <!-- Nav Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-           <ul class="navbar-nav d-flex align-items-lg-center ms-auto me-lg-3 gap-lg-4">
+ <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+
+      <!-- Brand + Mobile Toggle + Mobile Book Now Button -->
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <a class="navbar-brand text-white" href="#">
+          LADY SMITH
+          <span class="fw-light">RESORT</span>
+        </a>
+
+        <div class="d-flex align-items-center">
+          <a href="#" class="btn btn-book d-lg-none me-2">BOOK NOW</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex align-items-lg-center ms-auto me-lg-3 gap-lg-4">
           <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
           <li class="nav-item"><a class="nav-link" href="#">PROPERTIES</a></li>
           <li class="nav-item"><a class="nav-link" href="#">PACKAGES</a></li>
           <li class="nav-item"><a class="nav-link" href="#">ROOMS</a></li>
           <li class="nav-item"><a class="nav-link" href="#">BLOGS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
           <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+          
         </ul>
-          </div>
-    
-          <!-- Book Now Button for Desktop -->
-          <div class="d-none d-lg-flex align-items-center ms-auto">
-            <a href="#" class="btn btn-book">BOOK NOW</a>
-          </div>
-    
-        </div>
-      </nav>
+      </div>
 
+      <!-- Book Now Button for Desktop -->
+      <div class="d-none d-lg-flex align-items-center ms-auto">
+        <a href="#" class="btn btn-book">BOOK NOW</a>
+      </div>
+
+    </div>
+  </nav>
 
 <div id="scroll-container">
     <section class="banner mb-5">
@@ -97,8 +185,57 @@
     <h1>Room-Page</h1>
 </div>
 </section>
+<div class="booking-wrapper">
+<div class="container mt-5">
+  <div class="booking-box shadow p-4 rounded-4 bg-white">
+    <div class="row g-3 align-items-center">
+      
+      <!-- Check-in -->
+      <div class="col-md-4">
+        <label class="form-label fw-semibold">Check in</label>
+        <input type="datetime-local" class="form-control">
+      </div>
 
-<section class="hotel-header-section py-4 px-3" style="margin-top: 10px;">
+      <!-- Check-out -->
+      <div class="col-md-4">
+        <label class="form-label fw-semibold">Check out</label>
+        <input type="datetime-local" class="form-control">
+      </div>
+
+      <!-- Travellers -->
+      <div class="col-md-4">
+        <label class="form-label fw-semibold">Travellers</label>
+        <select class="form-select">
+          <option>1 Adult</option>
+          <option>2 Adults</option>
+          <option>2 Adults - 1 Child</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Buttons Row -->
+    <div class="row mt-4 justify-content-between align-items-center">
+      <!-- Per night / Per hour -->
+      <div class="col-md-6 d-flex justify-content-start">
+        <div class="btn-group" role="group">
+          <button class="btn btn-dark">Per night</button>
+          <button class="btn btn-outline-dark">Per hour</button>
+        </div>
+      </div>
+
+      <!-- Message / Request Booking -->
+      <div class="col-md-6 d-flex justify-content-end gap-2 mt-3 mt-md-0">
+        <button class="btn text-white" style="background-color: #FFC107;">Message</button>
+        <button class="btn text-white" style="background-color: #009688;">Request Booking</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<section class="hotel-header-section py-4 px-3 mt-5">
   <div class="container">
     <div class="row justify-content-between align-items-start">
       
@@ -117,7 +254,7 @@
         </div>
 
         <!-- Heading -->
-        <h4 class="fw-bold mb-2">OBLU XPERIENCE Ailafushi – All Inclusive with Free Transfers</h4>
+        <h4 class="fw-bold mb-4">OBLU XPERIENCE Ailafushi – All Inclusive with Free Transfers</h4>
 
         <!-- Location -->
         <p class="text-muted mb-0">
@@ -227,13 +364,18 @@
 
 
         <!-- Map Box -->
-        <div class="map-card bg-light p-3 rounded text-center">
-          <div class="mb-2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Location_dot_blue.svg" width="20" alt="">
-            <strong class="d-block">OBLU XPERIENCE Ailafushi</strong>
-          </div>
-          <a href="https://maps.google.com" target="_blank" class="btn  btn-sm mt-2" style="background-color: #00C7A0; color: #fff;">Show on map</a>
-        </div>
+        <div class="map-card rounded overflow-hidden mt-5" style="min-width: 100%; min-height: 250px;">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.7862751492848!2d73.49693581201402!3d4.264478796161926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24b590dc2c6c7fc9%3A0xc1a3390a8f05c06d!2sOBLU%20XPERIENCE%20Ailafushi!5e0!3m2!1sen!2sin!4v1719050212160!5m2!1sen!2sin"
+    width="100%"
+    height="250"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
       </div>
     </div>
   </div>
@@ -368,6 +510,486 @@
 </section>
 
 
+<!-- Property Surroundings Section -->
+<section class="property-surroundings py-5">
+  <div class="container">
+    <!-- Header row -->
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+      <h4 class="fw-bold mb-2 mb-md-0">Property surroundings</h4>
+      <a href="#" class="btn" style="background-color: #00C7A0; color: #fff;">See availability</a>
+    </div>
+
+    <!-- 3 Columns Section -->
+    <div class="row gy-4">
+      <!-- What's Nearby -->
+      <div class="col-md-4">
+        <div class="section-heading d-flex align-items-center mb-3">
+          <i class="fas fa-person-walking me-2 text-primary"></i>
+          <h6 class="mb-0 fw-bold">What's nearby</h6>
+        </div>
+        <ul class="list-unstyled">
+          <li class="d-flex justify-content-between border-bottom py-2">
+            <span>Swimming Area</span><span>10 km</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom py-2">
+            <span>Republic Square</span><span>14 km</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom py-2">
+            <span>Sultan Park</span><span>14 km</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom py-2">
+            <span>National Museum</span><span>14 km</span>
+          </li>
+          <li class="d-flex justify-content-between py-2">
+            <span>Henveiru Park</span><span>14 km</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Restaurants & Cafes -->
+      <div class="col-md-4">
+        <div class="section-heading d-flex align-items-center mb-3">
+          <i class="fas fa-utensils me-2 text-success"></i>
+          <h6 class="mb-0 fw-bold">Restaurants & cafes</h6>
+        </div>
+        <ul class="list-unstyled">
+          <li class="d-flex justify-content-between border-bottom py-2">
+            <span>Thila</span><span>9 km</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom py-2">
+            <span>Kurumba Cafe</span><span>9 km</span>
+          </li>
+          <li class="d-flex justify-content-between py-2">
+            <span>Ilaafathi Restaurant</span><span>9 km</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Beaches and Airports -->
+      <div class="col-md-4">
+        <div class="section-heading d-flex align-items-center mb-3">
+          <i class="fas fa-water me-2 text-info"></i>
+          <h6 class="mb-0 fw-bold">Beaches in the neighbourhood</h6>
+        </div>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex justify-content-between py-2">
+            <span>Himmafushi Beach</span><span>7 km</span>
+          </li>
+        </ul>
+
+        <div class="section-heading d-flex align-items-center mb-3">
+          <i class="fas fa-plane-departure me-2 text-warning"></i>
+          <h6 class="mb-0 fw-bold">Closest airports</h6>
+        </div>
+        <ul class="list-unstyled">
+          <li class="d-flex justify-content-between py-2">
+            <span>Velana International Airport</span><span>10 km</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Map Link -->
+    <div class="text-start mt-4">
+      <a href="https://maps.google.com" target="_blank" class="text-primary text-decoration-underline">Show map</a>
+    </div>
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <h4 class="fw-bold mb-1">Restaurants</h4>
+    <p class="text-muted mb-4">3 restaurants on site</p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="border rounded p-3 h-100">
+          <h6 class="fw-bold">Element X (All-Day Dining Restaurant)</h6>
+          <p class="mb-1"><strong>Cuisine</strong><br>Local • International</p>
+          <p class="mb-1"><strong>Open for</strong><br>Breakfast • Lunch • Dinner</p>
+          <p class="mb-1"><strong>Ambiance</strong><br>Family friendly</p>
+          <p class="mb-0"><strong>Dietary options</strong><br>Halal • Vegetarian • Gluten-free</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="border rounded p-3 h-100">
+          <h6 class="fw-bold">The Copper Pot Truck (Chargeable - on prebooking basis)</h6>
+          <p class="mb-1"><strong>Cuisine</strong><br>Seafood</p>
+          <p class="mb-1"><strong>Ambiance</strong><br>Modern</p>
+          <p class="mb-0"><strong>Dietary options</strong><br>Halal • Vegetarian</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="border rounded p-3 h-100">
+          <h6 class="fw-bold">Only Blu Underwater Restaurant (Chargeable - on prebooking basis)</h6>
+          <p class="mb-1"><strong>Cuisine</strong><br>Seafood • International</p>
+          <p class="mb-1"><strong>Ambiance</strong><br>Modern</p>
+          <p class="mb-0"><strong>Dietary options</strong><br>Halal • Vegetarian • Gluten-free</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="house-rules-section py-5">
+  <div class="container">
+    <!-- Title & Button -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+      <div>
+        <h4 class="fw-bold mb-3">House rules</h4>
+        <p class="mb-0">OBLU XPERIENCE Ailafushi – All Inclusive with Free Transfers takes special requests – add in the next step!</p>
+      </div>
+      <a href="#" class="btn mt-3 mt-md-0" style="background-color: #00C7A0; color: #fff;">See availability</a>
+    </div>
+
+    <!-- Rules Box -->
+    <div class="bg-white p-4 rounded shadow-sm">
+      <!-- Check-in -->
+      <div class="rule-item border-bottom pb-3 mb-3">
+        <h6 class="fw-bold mb-3"><i class="fas fa-sign-in-alt me-2 text-muted"></i>Check-in</h6>
+        <p class="mb-1">From 14:00 to 21:00</p>
+        <small class="text-muted">Guests are required to show a photo identification and credit card upon check-in.</small>
+      </div>
+
+      <!-- Check-out -->
+      <div class="rule-item border-bottom pb-3 mb-3">
+        <h6 class="fw-bold mb-3"><i class="fas fa-sign-out-alt me-2 text-muted"></i>Check-out</h6>
+        <p class="mb-0">Available 24 hours</p>
+      </div>
+
+      <!-- Cancellation / Prepayment -->
+      <div class="rule-item border-bottom pb-3 mb-3">
+        <h6 class="fw-bold mb-3"><i class="fas fa-credit-card me-2 text-muted"></i>Cancellation / prepayment</h6>
+        <p class="mb-0">Cancellation and prepayment policies vary according to accommodation type. <a href="#">Check what conditions</a> may apply.</p>
+      </div>
+
+      <!-- Children and Beds -->
+      <div class="rule-item border-bottom pb-3 mb-3">
+        <h6 class="fw-bold mb-3"><i class="fas fa-child me-2 text-muted"></i>Children and beds</h6>
+        <p><strong>Child policies</strong><br>Children of any age are welcome.<br>Children 12 years and above will be charged as adults.</p>
+        <p class="mb-0"><strong>Cot and extra bed policies</strong><br>Cots and extra beds are not available at this property.</p>
+      </div>
+
+      <!-- No Age Restriction, Pets, Groups -->
+      <div class="row border-bottom pb-3 mb-3">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h6 class="fw-bold mb-3"><i class="fas fa-universal-access me-2 text-muted"></i>No age restriction</h6>
+          <p class="mb-0">There is no age requirement for check-in</p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h6 class="fw-bold mb-3"><i class="fas fa-dog me-2 text-muted"></i>Pets</h6>
+          <p class="mb-0">Pets are not allowed.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold mb-3"><i class="fas fa-users me-2 text-muted"></i>Groups</h6>
+          <p class="mb-0">When booking more than 10 rooms, different policies and additional supplements may apply.</p>
+        </div>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="pt-3">
+        <h6 class="fw-bold"><i class="fas fa-money-check-alt me-2 text-muted"></i>Accepted payment methods</h6>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" width="50">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MasterCard_logo.png" alt="Mastercard" width="50">
+          <span class="badge bg-success px-3 py-2">
+  <i class="fas fa-money-bill-wave me-1"></i> Cash
+</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section py-5">
+  <div class="container">
+    <h4 class="fw-bold mb-4">FAQs about OBLU XPERIENCE Ailafushi – All Inclusive with Free Transfers</h4>
+    <div class="row">
+      
+      <!-- Left Column Accordion -->
+      <div class="col-md-6">
+        <div class="accordion" id="faqLeft">
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
+                What kind of breakfast is served at OBLU XPERIENCE Ailafushi?
+              </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#faqLeft">
+              <div class="accordion-body">A buffet breakfast with continental, vegetarian, and halal options is available.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                Does OBLU XPERIENCE Ailafushi have a pool?
+              </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqLeft">
+              <div class="accordion-body">Yes, the property has an outdoor pool for guests.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                What type of room can I book at OBLU XPERIENCE Ailafushi?
+              </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqLeft">
+              <div class="accordion-body">Rooms include Ocean View and Beachfront options.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                What are the check-in and check-out times?
+              </button>
+            </h2>
+            <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqLeft">
+              <div class="accordion-body">Check-in: 14:00 – 21:00, Check-out: 24 hours</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+                How much does it cost to stay?
+              </button>
+            </h2>
+            <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#faqLeft">
+              <div class="accordion-body">Prices vary based on dates and room type. Check availability for exact pricing.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column Accordion -->
+      <div class="col-md-6">
+        <div class="accordion" id="faqRight">
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6" aria-expanded="false" aria-controls="a6">
+                Does OBLU XPERIENCE Ailafushi have a restaurant?
+              </button>
+            </h2>
+            <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#faqRight">
+              <div class="accordion-body">Yes, multiple restaurants are available on-site.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7" aria-expanded="false" aria-controls="a7">
+                What is there to do at the property?
+              </button>
+            </h2>
+            <div id="a7" class="accordion-collapse collapse" aria-labelledby="q7" data-bs-parent="#faqRight">
+              <div class="accordion-body">Snorkeling, spa treatments, excursions, and live music are offered.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8" aria-expanded="false" aria-controls="a8">
+                How far is it from Male City?
+              </button>
+            </h2>
+            <div id="a8" class="accordion-collapse collapse" aria-labelledby="q8" data-bs-parent="#faqRight">
+              <div class="accordion-body">Approx. 14 km from Male City, accessible by speedboat.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q9">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a9" aria-expanded="false" aria-controls="a9">
+                Is there a hot tub?
+              </button>
+            </h2>
+            <div id="a9" class="accordion-collapse collapse" aria-labelledby="q9" data-bs-parent="#faqRight">
+              <div class="accordion-body">Yes, guests can enjoy the hot tub near the pool.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="q10">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a10" aria-expanded="false" aria-controls="a10">
+                Is it popular with families?
+              </button>
+            </h2>
+            <div id="a10" class="accordion-collapse collapse" aria-labelledby="q10" data-bs-parent="#faqRight">
+              <div class="accordion-body">Yes! Many families rate it highly for its all-inclusive perks and child-friendly features.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="testimonial-slider-section py-5">
+  <div class="container position-relative">
+    <h5 class="fw-bold mb-4">Guests who stayed here loved</h5>
+
+
+     <div class="custom-nav desktop-nav d-none d-md-flex">
+      <button class="btn prevBtn nav-left"><i class="fas fa-chevron-left"></i></button>
+      <button class="btn nextBtn nav-right"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Owl Carousel -->
+    <div class="owl-carousel owl-theme" id="testimonial-carousel">
+
+      <!-- Slide 1 -->
+      <div class="item">
+        <div class="card border rounded p-3 h-100">
+          <div class="fw-bold mb-1">Margaret</div>
+          <div class="text-muted mb-2">United Kingdom</div>
+          <p class="mb-0">“Our stay at OBLU Xperience in the Maldives was truly nothing short of spectacular. The resort's stunning overwater villas and...”</p>
+          <a href="#" class="d-block mt-2">Read more</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="item">
+        <div class="card border rounded p-3 h-100">
+          <div class="fw-bold mb-1">Suraj</div>
+          <div class="text-muted mb-2">United Arab Emirates</div>
+          <p class="mb-0">“Great atmosphere and very nice resort for family. The overall experience was exceptional and we’d love to come back again.”</p>
+          <a href="#" class="d-block mt-2">Read more</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="item">
+        <div class="card border rounded p-3 h-100">
+          <div class="fw-bold mb-1">Martin</div>
+          <div class="text-muted mb-2">Slovakia</div>
+          <p class="mb-0">“We loved the property layout and the staff across the entire resort were excellent. Our beach villa was beautifully located.”</p>
+          <a href="#" class="d-block mt-2">Read more</a>
+        </div>
+      </div>
+
+      <!-- Add more .item as needed -->
+    </div>
+
+    <!-- Arrows -->
+    <!-- <div class="custom-nav d-none d-md-block">
+      <button class="btn btn-light shadow-sm nav-left"><i class="fas fa-chevron-left"></i></button>
+      <button class="btn btn-light shadow-sm nav-right"><i class="fas fa-chevron-right"></i></button>
+    </div> -->
+
+    <!-- Arrows for mobile -->
+    <div class="custom-nav-mobile d-block d-md-none text-center mt-3">
+      <button class="btn btn-outline-secondary me-2 nav-left" style="border-radius: 25px;"><i class="fas fa-chevron-left"></i></button>
+      <button class="btn btn-outline-secondary nav-right" style="border-radius: 25px;"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<div class="container"  style="padding: 30px;margin-top: 120px;">
+      <!-- Header -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+        <div>
+          <p class=" fw-bold mb-1"style="color: #17BF9E;">Why Us?</p>
+          <h2 class="fw-bold" style="color: #086D59;font-family: 'Volkhov', serif;">Where Nature Meets<br>Nurture</h2>
+        </div>
+        <div class="d-flex gap-3 mt-3 mt-md-0">
+          <button class="btn custom-btn">Reserve now</button>
+          <button class="btn custom-outline-btn">Book Your Stay</button>
+        </div>
+      </div>
+  
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Card Start -->
+    <div class="col-md-4 col-sm-6">
+      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
+        <img src="room1.png" class="img-fluid" alt="Property Image">
+
+        <div class="py-5 p-3">
+          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+          <p class="text-muted mb-2">
+            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+          </p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="fw-semibold fs-6 text-dark">$1200</span>
+              <small class="text-muted">/ night</small>
+            </div>
+            <div class="rating-badge">
+              <i class="fas fa-star text-warning me-1"></i>4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
+        <img src="room2.png" class="img-fluid" alt="Property Image">
+
+        <div class="py-5 p-3">
+          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+          <p class="text-muted mb-2">
+            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+          </p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="fw-semibold fs-6 text-dark">$1200</span>
+              <small class="text-muted">/ night</small>
+            </div>
+            <div class="rating-badge">
+              <i class="fas fa-star text-warning me-1"></i>4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
+        <img src="blog3.png" class="img-fluid" alt="Property Image">
+
+        <div class="py-5 p-3">
+          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+          <p class="text-muted mb-2">
+            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+          </p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="fw-semibold fs-6 text-dark">$1200</span>
+              <small class="text-muted">/ night</small>
+            </div>
+            <div class="rating-badge">
+              <i class="fas fa-star text-warning me-1"></i>4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card End -->
+
+    <!-- Repeat the above .col-md-4 block two more times for other cards -->
+
+  </div>
+</div>
+
+
+    </div>
 <footer class="footer-section py-5 mt-5">
   <!-- Main Content Section -->
   <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
@@ -420,21 +1042,22 @@
 
   <!-- Leaf image between content & bottom -->
   <!-- Leaf image between content & bottom -->
-<div class="footer-leaf-wrapper text-center my-5">
-  <!-- Left image -->
+<!-- <div class="footer-leaf-wrapper text-center my-5">
   <img src="tree7.png" alt="Left Leaf Decor" class="footer-leaf footer-leaf-left">
 
-  <!-- Right image -->
   <img src="tree8.png" alt="Right Leaf Decor" class="footer-leaf footer-leaf-right">
-</div>
+</div> -->
 
 
   <!-- Bottom Section -->
-   <div class="container">
+   <div class="container mt-5">
     <!-- Center image above footer-bottom -->
 <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
   <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
   <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
@@ -455,6 +1078,7 @@
    </div>
   
 </footer>
+
 </div>
 
 
@@ -476,9 +1100,35 @@
 
 <!-- Fancybox JS -->
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
 
   <script>
-    
+
+
+   function updateValue(field, delta) {
+    const input = document.getElementById(field + 'Count');
+    let value = parseInt(input.value) + delta;
+    if (value < 0) value = 0;
+    input.value = value;
+  }
+
+  function updateTravelerSummary() {
+    const adults = document.getElementById('adultsCount').value;
+    const children = document.getElementById('childrenCount').value;
+    const rooms = document.getElementById('roomsCount').value;
+    document.getElementById('travelerSummary').textContent = `${adults} adults · ${children} child · ${rooms} room`;
+  }
+ flatpickr("#dateRangePicker", {
+    mode: "range",
+    dateFormat: "D j M",
+    minDate: "today",
+    showMonths: 2
+  });
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const footer = document.querySelector(".footer-section");
 
@@ -554,7 +1204,33 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function(){
+  var owl = $("#testimonial-carousel");
+  owl.owlCarousel({
+    items: 3,
+    margin: 15,
+    loop: true,
+    nav: false,
+    dots: false,
+    autoplay: true,                 // ✅ Auto slide
+    autoplayTimeout: 5000,         // ✅ 5 seconds between slides (you can increase for slower)
+    autoplaySpeed: 1000,           // ✅ Smooth transition speed (1s)
+    smartSpeed: 1000,              // ✅ Additional smooth transition
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
 
+  // Custom arrows
+  $(".nav-left").click(function() {
+    owl.trigger('prev.owl.carousel');
+  });
+  $(".nav-right").click(function() {
+    owl.trigger('next.owl.carousel');
+  });
+});
   </script>
 </body>
 </html>

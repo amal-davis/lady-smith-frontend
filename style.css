@@ -420,7 +420,7 @@ html, body {
 .leaf-decors {
   position: absolute;
   left: -90px;
-  bottom: -30px;
+  bottom: -100px;
   width: 250px; /* Adjust size as needed */
   z-index: 0;
   opacity: 0.4;
@@ -565,7 +565,7 @@ html, body {
 
   
  .adventure-section {
-  background: linear-gradient(to right, #e1fbf6, #ffffff);
+  background:  #e1fbf6;
   padding: 60px;
 }
 
@@ -601,7 +601,7 @@ html, body {
     margin-bottom: 10px;
   }
   .adventure-main-img {
-    height: 400px; /* Adjust as needed */
+    height: 400px !important; /* Adjust as needed */
     object-fit: cover;
     border-radius: 20px;
     width: 100%;

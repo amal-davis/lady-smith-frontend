@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Inter", sans-serif !important;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* prevent horizontal scroll only */
@@ -187,7 +188,7 @@ p{
  .banner {
     position: relative;
     background: url('footer-bg.jpg') no-repeat center center/cover;
-    height: 80vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,4 +610,83 @@ p{
     flex-direction: column;
     gap: 10px;
   }
+}
+.property-surroundings ul li {
+  font-size: 15px;
+}
+.property-surroundings i {
+  font-size: 18px;
+}
+.property-surroundings h6 {
+  font-size: 16px;
+}
+@media (max-width: 576px) {
+  .property-surroundings .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.house-rules-section p {
+  font-size: 15px;
+}
+.house-rules-section h6 {
+  font-size: 16px;
+}
+.rule-item i {
+  width: 20px;
+}
+@media (max-width: 576px) {
+  .house-rules-section .btn {
+    width: 100%;
+  }
+}
+.accordion-button {
+  font-size: 15px;
+}
+.accordion-body {
+  font-size: 14px;
+}
+/* Remove blue background when accordion is open */
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: inherit;
+  border: none;
+}
+
+/* Remove border on focus */
+.accordion-button:focus {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+/* Wrapper padding to allow space for buttons */
+.testimonial-slider-section .container {
+  position: relative;
+  padding: 0 40px; /* allow space for arrows */
+}
+
+.custom-nav.desktop-nav {
+  position: absolute;
+  top: 45%;
+  left: -10px;
+  width: 100%;
+  z-index: 10;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+}
+
+.custom-nav.desktop-nav .btn {
+  background: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #000;
+  border: none;
 }
