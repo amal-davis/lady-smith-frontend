@@ -109,7 +109,7 @@
   </section>
 
   <!-- Text Section -->
-  <section class="text-section">
+  <section class="text-section" style="margin-top: 90px;">
     <div class="container">
       <p class="mb-4">
         Shikara ride on the Dal lake is one of the most amazing experiences to do in Kashmir!
@@ -157,24 +157,70 @@
   </div>
 </section>
 
-  <div class="container mt-5 position-relative go-next-wrapper">
-  <!-- Decorative Leaf Image -->
-  <img src="tree4.png" alt="Leaf" class="leaf-decor">
-
-  <div class="row align-items-center go-next-section">
-    <!-- Text Section -->
-    <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
-      <h3 class="fw-bold mb-4">WHERE WILL YOU GO NEXT?</h3>
-      <p class="mb-4">You are spoiled of choice with our unique destinations,<br>our hotel and resorts</p>
-      <a href="#" class="go-next-btn">Book Now</a>
+  <section class="py-5 position-relative mt-5">
+  <div class="container position-relative">
+    <div class="row mb-4">
+      <div class="col-12 text-center text-md-start">
+        <h2 class="section-heading">More Packages</h2>
+      </div>
     </div>
 
-    <!-- Image Section -->
-    <div class="col-md-6 position-relative z-2">
-      <img src="blog3.png" alt="Pool" class="go-next-img">
+    <!-- Owl Carousel -->
+    <div class="owl-carousel package-carousel">
+      <!-- Card 1 -->
+      <div class="card package-card">
+              <img src="rome.png" class="card-img-top" alt="Rome">
+              <div class="card-body py-5" >
+                <div class="d-flex justify-content-between mb-1">
+                  <h6 class="mb-0">Rome, Italy</h6>
+                  <span>$5.42k</span>
+                </div>
+                <p class="mb-0 mt-3"><i class="ri-send-plane-fill"></i>&nbsp;10 Days Trip</p>
+              </div>
+            </div>
+  
+
+      <!-- Card 2 -->
+       <div class="card package-card">
+              <img src="london.jpg" class="card-img-top" alt="London">
+              <div class="card-body py-5">
+                <div class="d-flex justify-content-between mb-1">
+                  <h6 class="mb-0">London, UK</h6>
+                  <span>$4.2k</span>
+                </div>
+                <p class="mb-0 mt-3"><i class="ri-send-plane-fill"></i>&nbsp;12 Days Trip</p>
+              </div>
+            </div>
+
+            <div class="card package-card">
+              <img src="europe.png" class="card-img-top" alt="Europe">
+              <div class="card-body py-5">
+                <div class="d-flex justify-content-between mb-1">
+                  <h6 class="mb-0">Full Europe</h6>
+                  <span>$15k</span>
+                </div>
+                <p class="mb-0 mt-3"><i class="ri-send-plane-fill"></i>&nbsp;28 Days Trip</p>
+              </div>
+            </div>
+
+      <!-- Repeat for more cards -->
     </div>
+
+    <!-- Custom Navigation Arrows -->
+    <div class="custom-nav d-none d-md-block">
+      <button class="owl-prev custom-prev">&#10094;</button>
+      <button class="owl-next custom-next">&#10095;</button>
+    </div>
+
+    <!-- Mobile Arrows -->
+    <div class="custom-nav-mobile d-flex justify-content-center gap-3 mt-4 d-md-none">
+      <button class="owl-prev custom-prev btn btn-outline-dark rounded-circle px-3">&#10094;</button>
+      <button class="owl-next custom-next btn btn-outline-dark rounded-circle px-3">&#10095;</button>
+    </div>
+
   </div>
-</div>
+</section>
+
 <footer class="footer-section py-5 mt-5">
   <!-- Main Content Section -->
   <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
@@ -252,14 +298,14 @@
 
 
 <div class="footer-bottom position-relative">
-    <div class="container d-md-flex justify-content-between text-center text-md-start small">
-      <div>&copy; 2025 LADY SMITH. All Rights Reserved.</div>
-      <div>
-        <a href="#">Privacy Policy</a>
-        <a href="#" class="ms-3">Terms of Use</a>
-      </div>
+  <div class="container d-md-flex justify-content-between text-center text-md-start small">
+    <div class="text-muted small">&copy; 2025 LADY SMITH. All Rights Reserved.</div>
+    <div>
+      <a href="#" class="text-muted small">Privacy Policy</a>
+      <a href="#" class="ms-3 text-muted small">Terms of Use</a>
     </div>
   </div>
+</div>
    </div>
   
 </footer>
@@ -353,6 +399,31 @@ toggleBtn.addEventListener('click', () => {
     updateNavbarState(scrollbar.offset.y);
   }, 200);
 });
+ $(document).ready(function(){
+    $('.package-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      responsive:{
+        0:{ items:1 },
+        768:{ items:2 },
+        992:{ items:3 },
+        1200:{ items:4 }
+      }
+    });
+
+    // Custom nav buttons
+    $('.custom-prev').click(function() {
+      $('.package-carousel').trigger('prev.owl.carousel');
+    });
+
+    $('.custom-next').click(function() {
+      $('.package-carousel').trigger('next.owl.carousel');
+    });
+  });
   </script>
 </body>
 </html>

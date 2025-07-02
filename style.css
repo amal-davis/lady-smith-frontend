@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif !important;
   margin: 0;
   padding: 0;
   
@@ -71,7 +69,6 @@ html, body {
   }
   
   .navbar-brand {
-    font-family: 'Volkhov', serif;
     font-size: 1.8rem;
     line-height: 1.2;
     color: white;
@@ -215,9 +212,7 @@ html, body {
     max-width: 600px;
     padding: 0 1rem;
   }
-  .hero-content h1 {
-    font-family: 'Volkhov', serif;
-  }
+
   
 
   .hero-buttons .btn {
@@ -318,7 +313,6 @@ html, body {
   .jumbotron-content h2 {
     font-size: 2rem;
     font-weight: 400;
-    font-family: "Poppins", sans-serif;
 
   }
 
@@ -414,8 +408,7 @@ html, body {
   justify-content: space-between;
   border-radius: 0 0 20px 20px;
   background-color: #fff;
-  font-family:   "Poppins", sans-serif;
-  ;
+  
 }
 .leaf-decors {
   position: absolute;
@@ -473,7 +466,6 @@ html, body {
 
   .woodland{
     color: #086D59;
-    font-family: "Poppins", sans-serif;
 
     
   }
@@ -535,7 +527,6 @@ html, body {
     font-size: 20px !important;
     color: #086D59 !important;
     font-weight: 500 !important;
-    font-family: "Poppins", sans-serif !important;
 
     
   }
@@ -579,7 +570,6 @@ html, body {
     color: #086D59;
     font-weight: 700;
     font-size: 42px;
-    font-family: 'Volkhov', serif;
 
   }
 
@@ -696,7 +686,6 @@ html, body {
     font-size: 18px;
     font-weight: 600;
     color: #086D59;
-    font-family: "Poppins", sans-serif;
 
   }
 
@@ -896,7 +885,6 @@ html, body {
   font-size: 28px;
   font-weight: bold;
   line-height: 1.2;
-  font-family: 'Volkhov', serif;
   color: #000;
 }
 

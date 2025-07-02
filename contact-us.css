@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif !important;
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* prevent horizontal scroll only */
@@ -66,7 +64,6 @@ p{
   }
   
   .navbar-brand {
-    font-family: 'Volkhov', serif;
     font-size: 1.8rem;
     line-height: 1.2;
     color: white;
@@ -186,7 +183,7 @@ p{
   .banner {
     position: relative;
     background: url('footer-bg.jpg') no-repeat center center/cover;
-    height: 80vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,7 +221,7 @@ p{
 
   @media (max-width: 767px) {
     .banner {
-      height: 60vh;
+      height: 40vh;
     }
     .banner-content h1 {
       font-size: 2rem;
@@ -296,7 +293,6 @@ p{
   font-size: 28px;
   font-weight: bold;
   line-height: 1.2;
-  font-family: 'Volkhov', serif;
   color: #000;
 }
 
