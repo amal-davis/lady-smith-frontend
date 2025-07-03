@@ -278,48 +278,79 @@
     <div class="row g-4">
 
       <!-- Gallery Section (Left) -->
-      <div class="col-lg-9">
-        <div class="row g-2">
-          <!-- Left Main Image -->
-          <div class="col-md-8">
-            <a href="nature-image.png" data-fancybox="gallery">
-              <img src="nature-image.png" class="img-fluid w-100 rounded" alt="Main">
-            </a>
-          </div>
-
-          <!-- Right Stack (2 top images) -->
-          <div class="col-md-4 d-flex flex-column gap-2">
-            <a href="room1.png" data-fancybox="gallery">
-              <img src="room1.png" class="img-fluid rounded" alt="Room">
-            </a>
-            <a href="room2.png" data-fancybox="gallery">
-              <img src="room2.png" class="img-fluid rounded" alt="Bathroom">
-            </a>
-          </div>
-        </div>
-
-        <!-- Bottom Thumbnails -->
-        <div class="row g-2 mt-2">
-          <div class="col-6 col-sm-4 col-lg-2">
-            <a href="room1.png" data-fancybox="gallery"><img src="room1.png" class="img-fluid rounded w-100"></a>
-          </div>
-          <div class="col-6 col-sm-4 col-lg-2">
-            <a href="room2.png" data-fancybox="gallery"><img src="room2.png" class="img-fluid rounded w-100"></a>
-          </div>
-          <div class="col-6 col-sm-4 col-lg-2">
-            <a href="nature-image.png" data-fancybox="gallery"><img src="nature-image.png" class="img-fluid rounded w-100"></a>
-          </div>
-          <div class="col-6 col-sm-4 col-lg-2">
-            <a href="blog3.png" data-fancybox="gallery"><img src="blog3.png" class="img-fluid rounded w-100"></a>
-          </div>
-          <div class="col-6 col-sm-4 col-lg-2">
-            <a href="room1.png" data-fancybox="gallery"><img src="room1.png" class="img-fluid rounded w-100"></a>
-          </div>
-          <div class="col-6 col-sm-4 col-lg-2">
-            <a href="room2.png" data-fancybox="gallery"><img src="room2.png" class="img-fluid rounded w-100"></a>
-          </div>
-        </div>
+      <!-- Image Gallery Section -->
+<div class="col-lg-9">
+  <!-- Top Main and Stacked Images -->
+  <div class="row g-2">
+    <!-- Main Left Image -->
+    <div class="col-md-8">
+      <div class="h-100">
+        <a href="nature-image.png" data-fancybox="gallery">
+          <img src="nature-image.png" class="main-image" alt="Main Image">
+        </a>
       </div>
+    </div>
+
+    <!-- Right Column Stack -->
+    <div class="col-md-4">
+      <div class="image-stack-container">
+        <a href="room1.png" data-fancybox="gallery">
+          <img src="room1.png" class="stack-image" alt="Room 1">
+        </a>
+        <a href="room2.png" data-fancybox="gallery">
+          <img src="room2.png" class="stack-image" alt="Room 2">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Thumbnails -->
+  <div class="row g-2 mt-2">
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="thumbnail-wrapper">
+        <a href="room1.png" data-fancybox="gallery">
+          <img src="room1.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="thumbnail-wrapper">
+        <a href="room2.png" data-fancybox="gallery">
+          <img src="room2.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="thumbnail-wrapper">
+        <a href="nature-image.png" data-fancybox="gallery">
+          <img src="nature-image.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="thumbnail-wrapper">
+        <a href="blog3.png" data-fancybox="gallery">
+          <img src="blog3.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="thumbnail-wrapper">
+        <a href="room1.png" data-fancybox="gallery">
+          <img src="room1.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-lg-2">
+      <div class="thumbnail-wrapper">
+        <a href="room2.png" data-fancybox="gallery">
+          <img src="room2.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- Right Side: Rating & Map -->
       <div class="col-lg-3">
@@ -432,17 +463,18 @@
         </div>
 
 
-        <div class="map-card rounded overflow-hidden mt-5" style="min-width: 100%; min-height: 250px;">
+        <div class="map-card rounded overflow-hidden mt-5" style="width: 100%; height: 400px;">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.7862751492848!2d73.49693581201402!3d4.264478796161926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24b590dc2c6c7fc9%3A0xc1a3390a8f05c06d!2sOBLU%20XPERIENCE%20Ailafushi!5e0!3m2!1sen!2sin!4v1719050212160!5m2!1sen!2sin"
     width="100%"
-    height="250"
+    height="100%"
     style="border:0;"
     allowfullscreen=""
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </div>
+
 
       </div>
 
@@ -641,15 +673,15 @@
 
       <!-- No Age Restriction, Pets, Groups -->
       <div class="row border-bottom pb-3 mb-3">
-        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="col-md-4 mb-4 mb-md-0">
           <h6 class="fw-bold mb-3"><i class="fas fa-universal-access me-2 text-muted"></i>No age restriction</h6>
           <p class="mb-0">There is no age requirement for check-in</p>
         </div>
-        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="col-md-4 mb-4 mb-md-0">
           <h6 class="fw-bold mb-3"><i class="fas fa-dog me-2 text-muted"></i>Pets</h6>
           <p class="mb-0">Pets are not allowed.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4 mb-md-0">
           <h6 class="fw-bold mb-3"><i class="fas fa-users me-2 text-muted"></i>Groups</h6>
           <p class="mb-0">When booking more than 10 rooms, different policies and additional supplements may apply.</p>
         </div>
@@ -880,72 +912,72 @@
   <div class="row g-4">
 
     <!-- Card Start -->
-    <div class="col-md-4 col-sm-6">
-      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
-        <img src="room1.png" class="img-fluid" alt="Property Image">
+<div class="col-md-4 col-sm-6">
+            <div class="property-card shadow rounded-4 overflow-hidden bg-white w-100 h-100 d-flex flex-column">
+              <img src="room1.png" class="img-fluid" alt="Property Image">
 
-        <div class="py-5 p-3">
-          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
-          <p class="text-muted mb-2">
-            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
-          </p>
+              <div class="py-5 p-3">
+                <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+                <p class="text-muted mb-2">
+                  <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+                </p>
 
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <span class="fw-semibold fs-6 text-dark">$1200</span>
-              <small class="text-muted">/ night</small>
-            </div>
-            <div class="rating-badge">
-              <i class="fas fa-star text-warning me-1"></i>4.5
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
-        <img src="room2.png" class="img-fluid" alt="Property Image">
-
-        <div class="py-5 p-3">
-          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
-          <p class="text-muted mb-2">
-            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
-          </p>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <span class="fw-semibold fs-6 text-dark">$1200</span>
-              <small class="text-muted">/ night</small>
-            </div>
-            <div class="rating-badge">
-              <i class="fas fa-star text-warning me-1"></i>4.5
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fw-semibold fs-6 text-dark">$1200</span>
+                    <small class="text-muted">/ night</small>
+                  </div>
+                  <div class="rating-badge">
+                    <i class="fas fa-star text-warning me-1"></i>4.5
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-6">
-      <div class="property-card shadow rounded-4 overflow-hidden bg-white">
-        <img src="blog3.png" class="img-fluid" alt="Property Image">
+          <div class="col-md-4 col-sm-6">
+            <div class="property-card shadow rounded-4 overflow-hidden bg-white w-100 h-100 d-flex flex-column">
+              <img src="room2.png" class="img-fluid" alt="Property Image">
 
-        <div class="py-5 p-3">
-          <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
-          <p class="text-muted mb-2">
-            <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
-          </p>
+              <div class="py-5 p-3">
+                <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+                <p class="text-muted mb-2">
+                  <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+                </p>
 
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <span class="fw-semibold fs-6 text-dark">$1200</span>
-              <small class="text-muted">/ night</small>
-            </div>
-            <div class="rating-badge">
-              <i class="fas fa-star text-warning me-1"></i>4.5
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fw-semibold fs-6 text-dark">$1200</span>
+                    <small class="text-muted">/ night</small>
+                  </div>
+                  <div class="rating-badge">
+                    <i class="fas fa-star text-warning me-1"></i>4.5
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="property-card shadow rounded-4 overflow-hidden bg-white w-100 h-100 d-flex flex-column">
+              <img src="blog3.png" class="img-fluid" alt="Property Image">
+
+              <div class="py-5 p-3">
+                <h6 class="fw-bold mb-1">Capital Business Hotel</h6>
+                <p class="text-muted mb-2">
+                  <i class="fas fa-map-marker-alt me-1 text-dark"></i> Holiday sea resort
+                </p>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="fw-semibold fs-6 text-dark">$1200</span>
+                    <small class="text-muted">/ night</small>
+                  </div>
+                  <div class="rating-badge">
+                    <i class="fas fa-star text-warning me-1"></i>4.5
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     <!-- Card End -->
 
     <!-- Repeat the above .col-md-4 block two more times for other cards -->
@@ -956,94 +988,95 @@
 
     </div>
 <footer class="footer-section py-5 mt-5">
-  <!-- Main Content Section -->
-  <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
-    <div class="footer-logo-trust text-center mb-4">
-    <img src="bookingccom.png" alt="Booking.com" class="footer-trust-logo me-3">
-    <img src="trip-advisory.png" alt="Tripadvisor" class="footer-trust-logo">
-  </div>
-    <div class="row mt-5">
-      <!-- Logo & Contact -->
-      <div class="col-md-3 mb-4">
-        <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
-        <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
-        <a href="mailto:help@vistours.com">help@vistours.com</a>
-      </div>
+      <!-- Main Content Section -->
+      <div class="container pt-4 pb-2 flex-grow-0 position-relative" style="z-index: 1;">
+        <div class="footer-logo-trust text-center mb-4">
+          <img src="bookingccom.png" alt="Booking.com" class="footer-trust-logo me-3">
+          <img src="trip-advisory.png" alt="Tripadvisor" class="footer-trust-logo">
+        </div>
+        <div class="row mt-5">
+          <!-- Logo & Contact -->
+          <div class="col-md-3 mb-4 text-center text-md-start">
+            <h3 class="footer-logo">LADY SMITH<br><span class="footer-sub">RESORT</span></h3>
+            <p class="mb-1">328 Queensberry Street,<br>North Melbourne VIC 3051,<br>Australia</p>
+            <a href="mailto:help@vistours.com">help@vistours.com</a>
+          </div>
 
-      <!-- Support Links 1 -->
-      <div class="col-md-3 mb-4">
-        <h5 class="mb-3">Support</h5>
-        <ul class="list-unstyled">
-          <li class="mb-3"><a href="#">Get in Touch</a></li>
-          <li class="mb-3"><a href="#">Help Center</a></li>
-          <li class="mb-3"><a href="#">Live Chat</a></li>
-          <li class="mb-3"><a href="#">How it Works</a></li>
-        </ul>
-      </div>
+          <!-- Support Links 1 -->
+          <div class="col-md-3 mb-4 text-center text-md-start">
+            <h5 class="mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a href="#">Get in Touch</a></li>
+              <li class="mb-3"><a href="#">Help Center</a></li>
+              <li class="mb-3"><a href="#">Live Chat</a></li>
+              <li class="mb-3"><a href="#">How it Works</a></li>
+            </ul>
+          </div>
 
-      <!-- Support Links 2 -->
-      <div class="col-md-3 mb-4">
-        <h5 class="mb-3">Support</h5>
-        <ul class="list-unstyled">
-          <li class="mb-3"><a href="#">Get in Touch</a></li>
-          <li class="mb-3"><a href="#">Help Center</a></li>
-          <li class="mb-3"><a href="#">Live Chat</a></li>
-          <li class="mb-3"><a href="#">How it Works</a></li>
-        </ul>
-      </div>
+          <!-- Support Links 2 -->
+          <div class="col-md-3 mb-4 text-center text-md-start">
+            <h5 class="mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3"><a href="#">Get in Touch</a></li>
+              <li class="mb-3"><a href="#">Help Center</a></li>
+              <li class="mb-3"><a href="#">Live Chat</a></li>
+              <li class="mb-3"><a href="#">How it Works</a></li>
+            </ul>
+          </div>
 
-      <!-- Social Media -->
-      <div class="col-md-3 mb-4  text-start">
-        <h5>Follow Us</h5>
-       <div class="social-icons mt-3 d-flex">
+          <!-- Social Media -->
+          <div class="col-md-3 mb-4  text-center text-md-start">
+            <h5>Follow Us</h5>
+            <div class="social-icons mt-3 d-flex justify-content-center justify-content-md-start">
   <a href="#" class="icon-circle me-2"><i class="fab fa-facebook-f"></i></a>
   <a href="#" class="icon-circle me-2"><i class="fab fa-instagram"></i></a>
   <a href="#" class="icon-circle"><i class="fab fa-youtube"></i></a>
 </div>
 
-      </div>
-    </div>
-  </div>
 
-  <!-- Leaf image between content & bottom -->
-  <!-- Leaf image between content & bottom -->
-<!-- <div class="footer-leaf-wrapper text-center my-5">
+          </div>
+        </div>
+      </div>
+
+      <!-- Leaf image between content & bottom -->
+      <!-- Leaf image between content & bottom -->
+      <!-- <div class="footer-leaf-wrapper text-center my-5">
   <img src="tree7.png" alt="Left Leaf Decor" class="footer-leaf footer-leaf-left">
 
   <img src="tree8.png" alt="Right Leaf Decor" class="footer-leaf footer-leaf-right">
 </div> -->
 
 
-  <!-- Bottom Section -->
-   <div class="container mt-5">
-    <!-- Center image above footer-bottom -->
-<div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
-  <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-  <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
-</div>
+      <!-- Bottom Section -->
+      <div class="container mt-5">
+        <!-- Center image above footer-bottom -->
+        <div class="footer-center-image-wrapper d-flex justify-content-center align-items-end grass-row">
+          <img src="grass_images_footer.png" alt="Left Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Center Decor" class="footer-center-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+          <img src="grass_images_footer.png" alt="Right Decor" class="footer-side-image" style="height: 70px;">
+        </div>
 
 
 
-<div class="footer-bottom position-relative">
-  <div class="container d-md-flex justify-content-between text-center text-md-start small">
-    <div class="text-muted small">&copy; 2025 LADY SMITH. All Rights Reserved.</div>
-    <div>
-      <a href="#" class="text-muted small">Privacy Policy</a>
-      <a href="#" class="ms-3 text-muted small">Terms of Use</a>
-    </div>
-  </div>
-</div>
+        <div class="footer-bottom position-relative text-center text-md-start">
+          <div
+            class="container d-md-flex justify-content-between align-items-center text-center text-md-start small gap-2">
+            <div class="text-muted small">&copy; 2025 LADY SMITH. All Rights Reserved.</div>
+            <div>
+              <a href="#" class="text-muted small">Privacy Policy</a>
+              <a href="#" class="ms-3 text-muted small">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-   </div>
-  
-</footer>
+    </footer>
 
 </div>
 

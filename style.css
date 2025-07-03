@@ -591,7 +591,6 @@ html, body {
     margin-bottom: 10px;
   }
   .adventure-main-img {
-    height: 400px !important; /* Adjust as needed */
     object-fit: cover;
     border-radius: 20px;
     width: 100%;
@@ -717,11 +716,21 @@ html, body {
   }
 }
   
-  .testimonial-card {
-    background-color: transparent ;
-    border-radius: 15px;
-    height: 100%;
-  }
+ .testimonial-card {
+  background-color: transparent;
+  border-radius: 16px;
+  height: 100%;
+}
+
+.testimonial-card img.rounded-circle {
+  border: 1px solid #086D59;
+}
+
+.testimonial-card .fa-star,
+.testimonial-card .fa-star-half-alt {
+  font-size: 14px;
+}
+
   
   .nav-btn {
     width: 48px !important;
@@ -775,10 +784,10 @@ html, body {
     }
   }
 
-
+/* 
 .contact-section {
   background-color: #e3f4f4;
-}
+} */
 
 .icon-wrapper {
   background-color: #00C7A0;
@@ -790,38 +799,35 @@ html, body {
   height: 48px;
   width: 48px;
 }
-.form-label {
-  font-size: 13px;
+/* Set a soft border radius for all inputs and the form box */
+.p-4.shadow.rounded.bg-white {
+  border-radius: 12px !important;
 }
-.form-control{
-  border-radius: 0px !important;
+
+/* Input and textarea fields */
+.form-control {
+  border-radius: 25px !important;
+  border: 1px solid #00C7A0 !important; /* Default border color */
+  font-size: 14px;
 }
+
+/* Focused state */
 .form-control:focus,
 .input-group-text:focus {
-  box-shadow: none !important;
-  border-color: #ced4da !important;
-}
-/* Smaller placeholder text globally */
-::placeholder {
-  font-size: 13px; /* or any size you want */
+  border-color: #17BF9E !important; /* Highlight border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(23, 191, 158, 0.25) !important; /* Optional soft glow */
 }
 
-/* Vendor prefixes for better browser support */
-::-webkit-input-placeholder {
-  font-size: 13px;
-}
-
-:-moz-placeholder {
-  font-size: 13px;
-}
-
-::-moz-placeholder {
-  font-size: 13px;
-}
-
+/* Placeholder styling */
+::placeholder,
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
 :-ms-input-placeholder {
   font-size: 13px;
+  color: #999;
 }
+
 
 /* Leaf Decor for Contact Section */
 /* Static Leaf Decor Image in Bottom Left */
@@ -950,10 +956,24 @@ html, body {
 
 /* Footer Bottom */
 .footer-bottom {
-  padding-top: 10px;
-  padding-bottom: 15px;
-  margin-top: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+.footer-bottom .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer-bottom a {
+  margin-left: 10px;
+}
+.footer-bottom a:first-child {
+  margin-left: 0;
+}
+
 
 /* Leaf Image Wrapper */
 .footer-leaf-wrapper {
@@ -1001,6 +1021,9 @@ html, body {
 .footer-section.animate-leaf .footer-leaf {
   right: 10px;
   opacity: 1;
+}
+.footer-bottom .container {
+  gap: 10px !important; /* smaller space between flex items */
 }
 
 /* Responsive */

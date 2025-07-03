@@ -210,6 +210,14 @@ p{
   z-index: 2;
 }
 
+.gallery-section img {
+  transition: transform 0.3s ease;
+}
+.gallery-section img:hover {
+  transform: scale(1.03);
+}
+
+
 
   .package-card {
     border-radius: 28px !important;

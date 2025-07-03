@@ -239,6 +239,37 @@ p{
   text-decoration: underline;
 } */
 
+/* Set height ratios */
+.main-image,
+.stack-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Match heights of stacked right-side */
+.image-stack-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.image-stack-container a {
+  flex: 1;
+}
+
+/* Thumbnails with fixed aspect ratio */
+.thumbnail-wrapper {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.thumbnail-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 
 .hotel-header-section {
@@ -620,12 +651,36 @@ p{
     margin-top: 10px;
   }
 }
-.house-rules-section p {
-  font-size: 15px;
+.house-rules-section .rule-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
 }
-.house-rules-section h6 {
+
+.house-rules-section .rule-item:last-child,
+.house-rules-section .row.border-bottom:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.house-rules-section .rule-item h6,
+.house-rules-section .row h6 {
   font-size: 16px;
 }
+
+.house-rules-section p,
+.house-rules-section small {
+  font-size: 14px;
+  color: #555;
+}
+
+.house-rules-section .bg-white {
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+
 .rule-item i {
   width: 20px;
 }
